@@ -6,6 +6,3 @@ mvnw
 mvnw.cmd
 *.tar.gz
 target/
-src/main/java/com/chaos/garden/
-src/main/resources/static/
-src/main/resources/templates/
