@@ -10,10 +10,10 @@
 
 
     <!--<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
-        <!--<File>/opt/logs/notify/notify.log</File>-->
+        <!--<File>/opt/logs/app.log</File>-->
         <!--<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
             <!--&lt;!&ndash; daily rollover &ndash;&gt;-->
-            <!--<FileNamePattern>/opt/logs/notify/.%d{yyyy-MM-dd}.log</FileNamePattern>-->
+            <!--<FileNamePattern>/opt/logs/.%d{yyyy-MM-dd}.log</FileNamePattern>-->
         <!--</rollingPolicy>-->
 
         <!--<encoder>-->
