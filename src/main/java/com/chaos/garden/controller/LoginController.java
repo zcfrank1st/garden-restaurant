@@ -1,9 +1,10 @@
 package com.chaos.garden.controller;
 
 import com.chaos.garden.model.Auth;
-import com.chaos.garden.utils.Token;
+import com.chaos.garden.service.TokenService;
 import org.jose4j.jwt.consumer.InvalidJwtException;
 import org.jose4j.lang.JoseException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,6 +21,8 @@ import java.util.Map;
  */
 @RestController
 public class LoginController {
+    @Autowired
+    private TokenService tokenService;
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ResponseEntity<Map<String, String>> login (@RequestBody Auth auth) throws JoseException {
@@ -27,7 +30,7 @@ public class LoginController {
 
 
         Map<String, String> token = new HashMap<>();
-        token.put("token", Token.generateToken(auth));
+        token.put("token", tokenService.generateToken(auth));
         return new ResponseEntity<>(token, HttpStatus.OK);
     }
 
@@ -41,6 +44,6 @@ public class LoginController {
     // just demo
     @RequestMapping(value = "/verify", method = RequestMethod.POST)
     public ResponseEntity<Auth> verify (HttpServletRequest request) throws InvalidJwtException {
-        return new ResponseEntity<>(Token.verifyToken(request.getHeader("token")), HttpStatus.OK);
+        return new ResponseEntity<>(tokenService.verifyToken(request.getHeader("token")), HttpStatus.OK);
     }
 }

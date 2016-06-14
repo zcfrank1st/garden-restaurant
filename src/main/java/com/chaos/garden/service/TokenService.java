@@ -1,4 +1,4 @@
-package com.chaos.garden.utils;
+package com.chaos.garden.service;
 
 import com.chaos.garden.model.Auth;
 import com.google.gson.Gson;
@@ -12,24 +12,26 @@ import org.jose4j.jwt.consumer.InvalidJwtException;
 import org.jose4j.jwt.consumer.JwtConsumer;
 import org.jose4j.jwt.consumer.JwtConsumerBuilder;
 import org.jose4j.lang.JoseException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by zcfrank1st on 6/13/16.
  */
+@Service
 @Slf4j
-public class Token {
-    private static final Gson gson = new Gson();
-    private static RsaJsonWebKey rsaKey;
-    static {
-        try {
-            rsaKey = RsaJwkGenerator.generateJwk(2048);
-            rsaKey.setKeyId("k1");
-        } catch (JoseException e) {
-            log.error("jwk rsa key generate error");
-        }
+public class TokenService {
+    @Autowired
+    private Gson gson;
+
+    private RsaJsonWebKey rsaKey;
+
+    public TokenService() throws JoseException {
+        rsaKey = RsaJwkGenerator.generateJwk(2048);
+        rsaKey.setKeyId("k1");
     }
 
-    public static String generateToken(Auth auth) throws JoseException {
+    public String generateToken(Auth auth) throws JoseException {
         JwtClaims claims = new JwtClaims();
         claims.setClaim("auth", gson.toJson(auth));
 
@@ -42,7 +44,7 @@ public class Token {
         return jws.getCompactSerialization();
     }
 
-    public static Auth verifyToken (String token) throws InvalidJwtException {
+    public Auth verifyToken (String token) throws InvalidJwtException {
         JwtConsumer consumer = new JwtConsumerBuilder().setVerificationKey(rsaKey.getKey()).build();
         JwtClaims claims = consumer.processToClaims(token);
         return gson.fromJson((String) claims.getClaimValue("auth"), Auth.class);
