@@ -19,27 +19,41 @@ import java.nio.file.Paths;
 @Service
 @Slf4j
 public class FileService {
+    private static final String PIC_URL = "http://static.szechuangarden1986.com/pics";
+    private static final String VIDEO_URL = "http://static.szechuangarden1986.com/vodeos";
+    private static final String RESUME_URL = "http://static.szechuangarden1986.com/resumes";
+
     @Autowired
     private Config config;
 
-    public void uploadFile (MultipartFile file, int type) throws IOException {
+    public String uploadFile (MultipartFile file, int type) throws IOException {
         String filename = file.getOriginalFilename();
 
         String directory = "";
+        String urlPrefix = "";
         if (0 == type) {
             directory = config.getString("file.picture.path");
+            urlPrefix = PIC_URL;
         } else if (1 == type) {
             directory = config.getString("file.video.path");
+            urlPrefix = VIDEO_URL;
         } else if (2 == type) {
             directory = config.getString("file.resume.path");
+            urlPrefix = RESUME_URL;
         }
 
-        String filepath = Paths.get(directory, DigestUtils.md2Hex(filename)).toString();
-
+        String encodeFileName;
+        if (filename.contains(".")) {
+            String[] filenameArray = filename.split("\\.");
+            encodeFileName = DigestUtils.md2Hex(filename) + "." + filenameArray[filenameArray.length - 1];
+        } else {
+            encodeFileName = DigestUtils.md2Hex(filename);
+        }
         BufferedOutputStream stream = null;
         try {
-            stream = new BufferedOutputStream(new FileOutputStream(new File(filepath)));
+            stream = new BufferedOutputStream(new FileOutputStream(new File(Paths.get(directory, encodeFileName).toString())));
             stream.write(file.getBytes());
+            return urlPrefix + "/" + encodeFileName;
         } finally {
             if (stream != null) {
                 stream.close();
