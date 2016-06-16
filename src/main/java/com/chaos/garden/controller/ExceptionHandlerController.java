@@ -1,6 +1,8 @@
 package com.chaos.garden.controller;
 
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
@@ -12,7 +14,8 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class ExceptionHandlerController {
 
     @ExceptionHandler(Exception.class)
-    public void handlerException(Exception ex) {
+    public ResponseEntity handlerException(Exception ex) {
         log.error("exception throw , message : " + ex.getMessage());
+        return new ResponseEntity(HttpStatus.valueOf(999));
     }
 }
