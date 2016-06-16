@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mybatis="http://www.springframework.org/schema/c"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mybatis="http://www.springframework.org/schema/c"
        xmlns:tx="http://www.springframework.org/schema/tx"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
@@ -30,8 +31,7 @@
         <property name="dataSource" ref="dataSource" />
     </bean>
 
-    <tx:annotation-driven transaction-manager="transactionManager"/>
-
+    <!--<tx:annotation-driven transaction-manager="transactionManager"/>-->
     <!--<mybatis:scan base-package="com.chaos.garden.dao.mapper" />-->
 
     <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
@@ -47,8 +47,6 @@
         <constructor-arg index="2" value="@redis.port@" type="int"/>
         <constructor-arg index="3" value="5000" type="int"/>
     </bean>
-
-    <bean id="gson" class="com.google.gson.Gson"/>
 
     <bean id="gson" class="com.google.gson.Gson"/>
 </beans>
