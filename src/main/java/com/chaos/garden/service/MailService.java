@@ -29,7 +29,7 @@ public class MailService {
         email.setHostName("szechuangarden1986.com");
         email.setAuthentication(conf.getString("mail.admin"),conf.getString("mail.passwd"));
         email.setCharset("UTF-8");
-        email.setSSLOnConnect(true);
+//        email.setSSLOnConnect(true);
         email.setHostName(conf.getString("mail.host"));
         email.setFrom(conf.getString("mail.from.addr"), conf.getString("mail.from.people"));
         email.addTo(mail.getToMail(), mail.getToPeople());
@@ -41,6 +41,7 @@ public class MailService {
 
     @Async
     public void sendTracePassMail (Mail mail) throws EmailException, MalformedURLException {
-        sendMail(mail, conf.getString("mail.trace.pass.template"));
+        // conf.getString("mail.trace.pass.template")
+        sendMail(mail, "just for test, haha");
     }
 }
