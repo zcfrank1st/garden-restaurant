@@ -9,7 +9,7 @@ import java.util.Set;
  * Created by zcfrank1st on 6/17/16.
  */
 @Component
-public class Coupon {
+public class CouponUtils {
     private static final String ALPHABET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
     public Set<String> getCoupons (int number) {

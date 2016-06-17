@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
+import java.util.Set;
+
 /**
  * Created by zcfrank1st on 6/16/16.
  */
@@ -94,6 +96,32 @@ public class CacheService {
             jedis = getJedis();
             jedis.select(COUPON);
             jedis.del(key);
+        } finally {
+            if (jedis != null) {
+                jedis.close();
+            }
+        }
+    }
+
+    public long getRemainingSeconds (String key) {
+        Jedis jedis = null;
+        try {
+            jedis = getJedis();
+            jedis.select(COUPON);
+            return jedis.ttl(key);
+        } finally {
+            if (jedis != null) {
+                jedis.close();
+            }
+        }
+    }
+
+    public Set<String> getAllValidCoupons () {
+        Jedis jedis = null;
+        try {
+            jedis = getJedis();
+            jedis.select(COUPON);
+            return jedis.keys("*");
         } finally {
             if (jedis != null) {
                 jedis.close();

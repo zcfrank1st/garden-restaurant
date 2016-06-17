@@ -1,7 +1,7 @@
 package com.chaos.garden.service;
 
-import com.chaos.garden.Utils.Coupon;
-import lombok.Data;
+import com.chaos.garden.Utils.CouponUtils;
+import com.chaos.garden.model.Coupon;
 import org.joda.time.DateTime;
 import org.joda.time.Seconds;
 import org.joda.time.format.DateTimeFormat;
@@ -9,6 +9,8 @@ import org.joda.time.format.DateTimeFormatter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -19,12 +21,12 @@ public class CouponService {
     @Autowired
     private CacheService cacheService;
     @Autowired
-    private Coupon coupon;
+    private CouponUtils couponUtils;
 
     public Set<String> generateCoupons(int num, int value, String endtime) {
-        Set<String> coupons = coupon.getCoupons(num);
+        Set<String> coupons = couponUtils.getCoupons(num);
 
-        DateTimeFormatter formatter = DateTimeFormat.forPattern("yyyy-MM-dd hh:mm:ss");
+        DateTimeFormatter formatter = DateTimeFormat.forPattern("yyyy-MM-dd"); // yyyy-MM-dd 00:00:00 expired
         DateTime end = formatter.parseDateTime(endtime);
         DateTime now = new DateTime();
 
@@ -44,5 +46,18 @@ public class CouponService {
 
     public int getCouponValue(String key) {
         return cacheService.getCouponValue(key);
+    }
+
+    public List<Coupon> getAllValidCoupons() {
+        List<Coupon> coupons = new ArrayList<>();
+        cacheService.getAllValidCoupons().stream().filter(e -> cacheService.getRemainingSeconds(e) > 0).forEach(e -> {
+            Coupon coupon = new Coupon();
+            coupon.setExpiredTime(new DateTime().plusSeconds((int)cacheService.getRemainingSeconds(e)).toString("yyyy-MM-dd"));
+            coupon.setCode(e);
+            coupon.setValue(cacheService.getCouponValue(e));
+            coupons.add(coupon);
+        });
+
+        return coupons;
     }
 }
