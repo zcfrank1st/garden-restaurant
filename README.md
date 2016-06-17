@@ -1,4 +1,14 @@
-Garden Restaurant Backend Project
-============
+Szechuan Garden
+===
 
-A project for a restaurant ^-^
+#### @Description
+A web app for a restaurant.
+
+used framework:
+`spring boot`
+`angularjs` etc.
+
+
+#### @License
+
+MIT
