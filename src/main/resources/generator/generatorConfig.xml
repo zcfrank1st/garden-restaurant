@@ -2,13 +2,13 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-    <classPathEntry location=".m2/repository/mysql/mysql-connector-java/5.1.37/mysql-connector-java-5.1.37.jar"/>
+    <classPathEntry location="/Users/zcfrank1st/.m2/repository/mysql/mysql-connector-java/5.1.37/mysql-connector-java-5.1.37.jar"/>
     <context id="MysqlTables" targetRuntime="MyBatis3">
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://192.168.33.220:3306/comment"
-                        userId=""
-                        password="">
+                        connectionURL="jdbc:mysql://74.208.105.178:3306/restaurant_clinet"
+                        userId="root"
+                        password="abcd1234">
         </jdbcConnection>
 
         <javaTypeResolver>
@@ -28,7 +28,12 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <!--<table tableName="comment_topic"/>-->
+        <table tableName="categories"/>
+        <table tableName="customers"/>
+        <table tableName="dishes"/>
+        <table tableName="employees"/>
+        <table tableName="orders"/>
+        <table tableName="reserves"/>
         <!--<table tableName="comment_info">-->
             <!--<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true" type="post"/>-->
         <!--</table>-->
