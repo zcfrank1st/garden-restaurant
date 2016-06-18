@@ -1,4 +1,4 @@
-package com.chaos.garden.controller;
+package com.chaos.garden.controller.biz;
 
 import com.chaos.garden.model.Auth;
 import com.chaos.garden.service.TokenService;
