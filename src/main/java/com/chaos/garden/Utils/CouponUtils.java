@@ -1,4 +1,4 @@
-package com.chaos.garden.Utils;
+package com.chaos.garden.utils;
 
 import org.springframework.stereotype.Component;
 

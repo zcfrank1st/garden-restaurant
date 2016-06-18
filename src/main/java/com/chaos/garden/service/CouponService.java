@@ -1,6 +1,6 @@
 package com.chaos.garden.service;
 
-import com.chaos.garden.Utils.CouponUtils;
+import com.chaos.garden.utils.CouponUtils;
 import com.chaos.garden.model.Coupon;
 import org.joda.time.DateTime;
 import org.joda.time.Seconds;
