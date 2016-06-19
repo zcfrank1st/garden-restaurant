@@ -1,6 +1,6 @@
 package com.chaos.garden.service;
 
-import com.chaos.garden.model.Auth;
+import com.chaos.garden.model.gen.Customer;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
 import org.jose4j.jwk.RsaJsonWebKey;
@@ -31,7 +31,7 @@ public class TokenService {
         rsaKey.setKeyId("k1");
     }
 
-    public String generateToken(Auth auth) throws JoseException {
+    public String generateToken(Customer auth) throws JoseException {
         JwtClaims claims = new JwtClaims();
         claims.setClaim("auth", gson.toJson(auth));
 
@@ -44,9 +44,9 @@ public class TokenService {
         return jws.getCompactSerialization();
     }
 
-    public Auth verifyToken (String token) throws InvalidJwtException {
+    public Customer verifyToken (String token) throws InvalidJwtException {
         JwtConsumer consumer = new JwtConsumerBuilder().setVerificationKey(rsaKey.getKey()).build();
         JwtClaims claims = consumer.processToClaims(token);
-        return gson.fromJson((String) claims.getClaimValue("auth"), Auth.class);
+        return gson.fromJson((String) claims.getClaimValue("auth"), Customer.class);
     }
 }

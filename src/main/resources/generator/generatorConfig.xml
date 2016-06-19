@@ -28,12 +28,12 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="categories"/>
-        <table tableName="customers"/>
-        <table tableName="dishes"/>
-        <table tableName="employees"/>
-        <table tableName="orders"/>
-        <table tableName="reserves"/>
+        <table tableName="category"/>
+        <table tableName="customer"/>
+        <table tableName="dish"/>
+        <table tableName="employee"/>
+        <table tableName="order"/>
+        <table tableName="reserve"/>
         <!--<table tableName="comment_info">-->
             <!--<generatedKey column="id" sqlStatement="SELECT LAST_INSERT_ID()" identity="true" type="post"/>-->
         <!--</table>-->

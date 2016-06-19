@@ -7,4 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class OrderController {
+    // TODO: 6/18/16 
+    public void addOrder () {}
+
+    public void updateOrder () {}
+
+    public void deleteOrder () {}
+
+    public void getOrdersWithTimePartition () {}
 }
