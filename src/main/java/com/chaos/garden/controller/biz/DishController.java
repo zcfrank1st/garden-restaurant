@@ -36,4 +36,7 @@ public class DishController {
     public ResponseEntity getDishes () {
         return new ResponseEntity<>(dishService.getDishes(), HttpStatus.OK);
     }
+
+    // TODO: 6/19/16 get all dishes
+    // show dished and catgories
 }

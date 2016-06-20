@@ -7,5 +7,5 @@ import lombok.Data;
  */
 @Data
 public class Story {
-    // TODO: 6/19/16  
+    // TODO: 6/19/16
 }
