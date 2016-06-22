@@ -2,6 +2,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
+    <base href="/">
     <meta name="description" content="szechuangarden1986">
     <meta name="keywords" content="szechuangarden1986,restaurant,chinese cuisine">
     
@@ -25,12 +26,19 @@
     <meta name='apple-mobile-web-app-status-bar-style' content='black'>
 <!--    
     <link rel="apple-touch-icon" href="">
-    <link rel="icon" href="" />    
-    <link ref="stylesheet" href="">
-    <script scr=""></script>
+    <link rel="icon" href="" />   
 -->
+    <link type="text/css" rel="stylesheet" href="/designs/styles/libs/normalize.css">
+    <link type="text/css" rel="stylesheet" href="/designs/styles/main.css">
+    <script type="text/javascript" src="/designs/scripts/libs/angular.min.js"></script>
+    <script type="text/javascript" src="/designs/scripts/libs/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="/designs/scripts/libs/angular-ui-router.min.js"></script>
+
 </head>
 
 <body>
-    <img alt="szechuangarden1986" src="http://static.szechuangarden1986.com/pics/comingsoon.jpg">
+    <div ui-view></div>
+    
+    Hello
+    
 </body>
