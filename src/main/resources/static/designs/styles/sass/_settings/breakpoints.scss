@@ -1,29 +1,36 @@
 // define the screen sizes
+
+
+
 $small: 640 !default;
 $medium: 960 !default;
 $large: 1280 !default;
 $min-width: 320 !global;
 $max-width: 1600 !global;
 
+$breakpointsArary: $small, $medium, $large;
+
 $breakpoints:(
-    small: $small, // max-width: 640
-    medium: $medium, // min-width: 641 max-width: 960
-    large: $large, // min-width: 961 max-width: 1280 
-)!global;
+    small: "min-width:" + em($small), // max-width: 640
+    medium: "min-width:" + em($medium), // min-width: 641 max-width: 960
+    large: "min-width:" + em($large), // min-width: 961 max-width: 1280 
+) !global;
 
 
 @function getBreakpoint($bq) {
     // $bq is default to be a string;can be a number too
     // if $bq is a string, we will return a media query
-    // if $bq is a number, we will compare it with the breakpoints
-    $bq: if (type-of($bq)==string, map-get($bq, $breakpoints), $bq);
-    
-    
+    // TODO: if $bq is a number, we will compare it with the breakpoints
+    @if type-of($bq)==string {
+      $bq : map-get($breakpoints,$bq);
+    } @else {
+        $bq : small;
+    }
+    @return $bq;
 }
     
 @mixin breakpointsDef ($bp) {
     @include media(getBreakpoint($bp)) {
         @content
-    }
-        
+    }      
 }
