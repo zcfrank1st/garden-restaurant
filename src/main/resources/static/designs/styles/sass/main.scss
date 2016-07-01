@@ -1,0 +1,15 @@
+@import "_settings/settings";
+@import "_settings/container";
+
+@include breakpoints-def(medium) {
+    div{
+    @include span-columns(6);
+        @include omega();}
+    
+    .column {
+    @include outer-container();
+    }
+    
+    
+}
+

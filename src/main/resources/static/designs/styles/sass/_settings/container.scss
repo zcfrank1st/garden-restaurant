@@ -1,5 +1,6 @@
 // define the container of the website
 
-.container {
-    
+body{
+    @include outer-container($max-width);
 }
+

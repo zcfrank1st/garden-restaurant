@@ -1,19 +1,16 @@
 // define the screen sizes
-
-
-
 $small: 640 !default;
 $medium: 960 !default;
 $large: 1280 !default;
-$min-width: 320 !global;
-$max-width: 1600 !global;
+$min-width: 320px !global;
+$max-width: 1600px !global;
 
-$breakpointsArary: $small, $medium, $large;
+$breakpoint-array: (small, medium, large, xlarge) !default;
 
 $breakpoints:(
-    small: "min-width:" + em($small), // max-width: 640
-    medium: "min-width:" + em($medium), // min-width: 641 max-width: 960
-    large: "min-width:" + em($large), // min-width: 961 max-width: 1280 
+    small: em($small), // min-width: 640
+    medium: em($medium), // min-width: 960
+    large: em($large), // min-width: 1280 ,
 ) !global;
 
 
@@ -29,8 +26,8 @@ $breakpoints:(
     @return $bq;
 }
     
-@mixin breakpointsDef ($bp) {
+@mixin breakpoints-def ($bp) { 
     @include media(getBreakpoint($bp)) {
-        @content
-    }      
+        @content;
+    }    
 }
