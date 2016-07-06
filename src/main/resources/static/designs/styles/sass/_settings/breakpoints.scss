@@ -5,7 +5,9 @@ $large: 1280 !default;
 $min-width: 320px !global;
 $max-width: 1600px !global;
 
-$breakpoint-array: (small, medium, large, xlarge) !default;
+$breakpoint-array: (small, medium, large) !default;
+
+$breakpoint-number: length($breakpoint-array) !global;
 
 $breakpoints:(
     small: em($small), // min-width: 640
