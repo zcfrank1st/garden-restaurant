@@ -1,15 +1,17 @@
 @import "_settings/settings";
 @import "_settings/container";
 
+
+@import "components/page.scss";
+@import "components/global-nav.scss";
+
 @include breakpoints-def(medium) {
     div{
-    @include span-columns(6);
+        @include fill-parent();
+    @include span-columns(12);
         @include omega();}
     
-    .column {
-    @include outer-container();
-    }
-    
-    
 }
+
+@include column-grid($stack: $column-grid-stack, $selector: $column-container);
 

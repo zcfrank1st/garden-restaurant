@@ -1,3 +1,5 @@
+<!doctype html>
+<html ng-app="garden-restaurant">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,17 +30,27 @@
     <link rel="apple-touch-icon" href="">
     <link rel="icon" href="" />   
 -->
-    <link type="text/css" rel="stylesheet" href="/designs/styles/libs/normalize.css">
-    <link type="text/css" rel="stylesheet" href="/designs/styles/main.css">
-    <script type="text/javascript" src="/designs/scripts/libs/angular.min.js"></script>
-    <script type="text/javascript" src="/designs/scripts/libs/angular-ui-router.min.js"></script>
-    <script type="text/javascript" src="/designs/scripts/libs/angular-ui-router.min.js"></script>
+<!--    TODO: change to the server path later-->
+    <link type="text/css" rel="stylesheet" href="/garden-restaurant/src/main/resources/static/designs/styles/libs/normalize.css">
+    <link type="text/css" rel="stylesheet" href="/garden-restaurant/src/main/resources/static/designs/styles/main.css">
+    <script type="text/javascript" src="/garden-restaurant/src/main/resources/static/designs/scripts/libs/angular.min.js"></script>
+    <script type="text/javascript" src="/garden-restaurant/src/main/resources/static/designs/scripts/libs/angular-ui-router.min.js"></script>
+
 
 </head>
 
-<body>
+<body class="page">
+    <nav class="column">
+        <div class="full-five row global-nav">
+            <a>Menu</a>
+            <a>reservations</a>
+            <a>rewards</a>
+            <a>our story</a>
+            <a>contact</a>
+        </ul>
+    </nav>
+    
     <div ui-view></div>
-    
-    Hello
-    
 </body>
+    
+</html>

@@ -21,6 +21,11 @@ $column-grid-stack:(
 // column container class
 $column-container: ".column";
 
+// inline block row
+$column-row: ".row";
+
+$column-children: "li, div, a";
+
 // column padding value
 $column-container-spacing: (24,48,80);
 
@@ -40,10 +45,19 @@ $column-container-spacing: (
                 @each $value in $stack {
                     $col:12/nth(nth($value,2),$i);
                     #{nth($value,1)} {
-                        @include span-columns ($col);
+                        #{$column-children}
+                        {
+                            @include span-columns ($col);
+                        }
                     };
                 }
             }
         }
+    }
+}
+
+#{$column-row} {
+    #{$column-children} {
+        display: inline-block;
     }
 }
