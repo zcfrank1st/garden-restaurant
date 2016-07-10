@@ -6,11 +6,27 @@ var SGardent = angular.module('SGarden', [
   'SGarden.nav'
 ])
 
-.config(['$stateProvider', '$locationProvider'], function($stateProvider, $locationProvider) {
-    $locationProvider.html5Mode(true);
-    $stateProvider.state("home", {
-        url:"/",
-        templateUrl: "../../apps/components/global-nav.html",
-        controller: "globalNavCtrl"
-    });
+.run(
+  [          '$rootScope', '$state', '$stateParams',
+    function ($rootScope,   $state,   $stateParams) {
+
+    $rootScope.$state = $state;
+    $rootScope.$stateParams = $stateParams;
+    }
+  ]
+)
+
+.config([       '$stateProvider', '$locationProvider', '$urlRouterProvider', 
+        function($stateProvider,   $locationProvider,   $urlRouterProvider) {
+            $locationProvider.html5Mode(true);
+
+            $urlRouterProvider
+                .otherwise('/');
+
+            $stateProvider
+                .state("menu", {
+                    url:"/menu",
+                    templateUrl: "../../apps/components/menu.html",
+                    controller: "menuCtrl"
+                });
 }]);

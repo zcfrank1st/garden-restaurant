@@ -4,4 +4,8 @@ $parent-class: ".global-nav";
     a {
         background-color: brown;
     }
+    
+    a.active {
+        background-color: darkred;
+    }
 }

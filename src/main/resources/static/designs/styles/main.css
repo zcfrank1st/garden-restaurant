@@ -4,32 +4,153 @@ html {
 *, *::after, *::before {
   box-sizing: inherit; }
 
-body {
+.page {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto; }
-  body::after {
+  .page::after {
     clear: both;
     content: "";
     display: block; }
 
+.row li, .row div, .row a {
+  display: inline-block; }
+
+.page {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto; }
+  .page::after {
+    clear: both;
+    content: "";
+    display: block; }
+
+.row li, .row div, .row a {
+  display: inline-block; }
+
+body {
+  background-color: azure; }
+
+.global-nav a {
+  background-color: brown; }
+
 @media screen and (min-width: 60em) {
   div {
+    width: 100%;
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 48.82117%;
+    width: 100%;
     margin-right: 0; }
     div:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 40em) {
+  .column .full li, .column .full div, .column .full a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .column .full li:last-child, .column .full div:last-child, .column .full a:last-child {
       margin-right: 0; }
-
-  .column {
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto; }
-    .column::after {
-      clear: both;
-      content: "";
-      display: block; } }
+  .column .full-five li, .column .full-five div, .column .full-five a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .column .full-five li:last-child, .column .full-five div:last-child, .column .full-five a:last-child {
+      margin-right: 0; }
+  .column .two-three li, .column .two-three div, .column .two-three a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .column .two-three li:last-child, .column .two-three div:last-child, .column .two-three a:last-child {
+      margin-right: 0; }
+  .column .full-two li, .column .full-two div, .column .full-two a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .column .full-two li:last-child, .column .full-two div:last-child, .column .full-two a:last-child {
+      margin-right: 0; }
+  .column .full-three li, .column .full-three div, .column .full-three a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .column .full-three li:last-child, .column .full-three div:last-child, .column .full-three a:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 60em) {
+  .column .full li, .column .full div, .column .full a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .column .full li:last-child, .column .full div:last-child, .column .full a:last-child {
+      margin-right: 0; }
+  .column .full-five li, .column .full-five div, .column .full-five a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .column .full-five li:last-child, .column .full-five div:last-child, .column .full-five a:last-child {
+      margin-right: 0; }
+  .column .two-three li, .column .two-three div, .column .two-three a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .column .two-three li:last-child, .column .two-three div:last-child, .column .two-three a:last-child {
+      margin-right: 0; }
+  .column .full-two li, .column .full-two div, .column .full-two a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .column .full-two li:last-child, .column .full-two div:last-child, .column .full-two a:last-child {
+      margin-right: 0; }
+  .column .full-three li, .column .full-three div, .column .full-three a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .column .full-three li:last-child, .column .full-three div:last-child, .column .full-three a:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 80em) {
+  .column .full li, .column .full div, .column .full a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .column .full li:last-child, .column .full div:last-child, .column .full a:last-child {
+      margin-right: 0; }
+  .column .full-five li, .column .full-five div, .column .full-five a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 18.11388%; }
+    .column .full-five li:last-child, .column .full-five div:last-child, .column .full-five a:last-child {
+      margin-right: 0; }
+  .column .two-three li, .column .two-three div, .column .two-three a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .column .two-three li:last-child, .column .two-three div:last-child, .column .two-three a:last-child {
+      margin-right: 0; }
+  .column .full-two li, .column .full-two div, .column .full-two a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    .column .full-two li:last-child, .column .full-two div:last-child, .column .full-two a:last-child {
+      margin-right: 0; }
+  .column .full-three li, .column .full-three div, .column .full-three a {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    .column .full-three li:last-child, .column .full-three div:last-child, .column .full-three a:last-child {
+      margin-right: 0; } }
 
 /*# sourceMappingURL=main.css.map */

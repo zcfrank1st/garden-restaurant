@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="garden-restaurant">
+<html ng-app="SGarden">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,17 +40,37 @@
 </head>
 
 <body class="page">
+    
+    <div ui-view></div>
     <nav class="column">
-        <div class="full-five row global-nav">
-            <a>Menu</a>
-            <a>reservations</a>
-            <a>rewards</a>
-            <a>our story</a>
-            <a>contact</a>
+
+        <a class="full" ui-sref="home">Logo</a>
+    
+        <ul class="full-five row global-nav">
+            <li ui-sref-active="active">
+                <a ui-sref="menu">Menu</a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="reservations">reservations</a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="rewards">rewards</a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="our story">our story</a>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="contact">contact</a>
+            </li>
         </ul>
     </nav>
     
-    <div ui-view></div>
+    
+    
+    <!--    TODO: change to the server path later-->
+    <script src="/garden-restaurant/src/main/resources/static/designs/scripts/app.js"></script>
+    <script src="/garden-restaurant/src/main/resources/static/designs/scripts/components/global-nav.js"></script>
+    
 </body>
     
 </html>

@@ -1,9 +1,8 @@
-angular.module('myApp.welcome',
-    ['ngRoute',
-     'ui.bootstrap'
+angular.module('SGarden.nav',
+    ['ui.router'
     ])
 
-    .config(['$routeProvider', function($routeProvider) {
+    .config(['$stateProvider', function($stateProvider) {
       $routeProvider
           
     }])
