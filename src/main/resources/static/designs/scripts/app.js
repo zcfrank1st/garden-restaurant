@@ -2,8 +2,10 @@
 
 // Declare app level module which depends on views, and components
 var SGardent = angular.module('SGarden', [
-  'ui.router',
-  'SGarden.nav'
+    'ui.router',
+    'ngAnimate',
+    'ui.bootstrap',
+    'SGarden.homepg'
 ])
 
 .run(
@@ -24,6 +26,11 @@ var SGardent = angular.module('SGarden', [
                 .otherwise('/');
 
             $stateProvider
+                .state("home", {
+                    url:"/",
+                    templateUrl: "../../apps/components/home.html",
+                    controller: "homeCtrl"
+                })
                 .state("menu", {
                     url:"/menu",
                     templateUrl: "../../apps/components/menu.html",

@@ -1,0 +1,29 @@
+<div class="homepg">
+    <div class="column homepg-caoursel">
+        <div class="full">
+            <uib-carousel active="active" interval="homepgInterval" no-wrap="noWrapSlides">
+              <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+                <img ng-src="{{slide.image}}">
+              </uib-slide>
+            </uib-carousel>
+        </div>
+    </div>
+
+    <div class="column homepg-panel">
+
+        <ul class="two-three">
+            <li>
+                <h4>Monthly Special</h4>
+                <p>August 2016</p>
+            </li>
+            <li>
+                <h4>How far</h4>
+                <p>Your adventure</p>
+            </li>
+            <li>
+                <h4>Local Favorites</h4>
+                <p></p>
+            </li>
+        </ul>
+    </div>
+</div>

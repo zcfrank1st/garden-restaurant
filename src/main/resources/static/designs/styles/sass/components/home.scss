@@ -1,0 +1,19 @@
+$parent-class: ".homepg";
+
+#{$parent-class} {
+    @include breakpoints-def(small) {
+
+
+    }
+    
+    @include breakpoints-def(medium) {
+
+
+    }
+    
+    @include breakpoints-def(large) {
+
+
+    }
+}
+
