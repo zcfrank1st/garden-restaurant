@@ -28,12 +28,12 @@ var SGardent = angular.module('SGarden', [
             $stateProvider
                 .state("home", {
                     url:"/",
-                    templateUrl: "../../apps/components/home.html",
+                    templateUrl: "apps/components/home.html",
                     controller: "homeCtrl"
                 })
                 .state("menu", {
                     url:"/menu",
-                    templateUrl: "../../apps/components/menu.html",
+                    templateUrl: "apps/components/menu.html",
                     controller: "menuCtrl"
                 });
 }]);

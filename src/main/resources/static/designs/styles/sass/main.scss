@@ -5,13 +5,6 @@
 @import "components/page.scss";
 @import "components/global-nav.scss";
 
-@include breakpoints-def(medium) {
-    div{
-        @include fill-parent();
-    @include span-columns(12);
-        @include omega();}
-    
-}
 
-@include column-grid($stack: $column-grid-stack, $selector: $column-container);
+
 

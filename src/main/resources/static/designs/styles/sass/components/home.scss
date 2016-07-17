@@ -2,7 +2,10 @@ $parent-class: ".homepg";
 
 #{$parent-class} {
     @include breakpoints-def(small) {
-
+        .menuButton {
+            display: block;
+            background-image: url(" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAU0lEQVQ4T2NkoBAwUqifgWoGnGRgYDAj0TUgPRYwFxwHcUg04BgDA4M11bxAouUI5TAXUBwGJxgYGMxJdMYgC4MzDAwMxiR6ASUdDIMwINH7COUAalAMEcvSqK4AAAAASUVORK5CYII=");
+        }
 
     }
     
@@ -12,7 +15,9 @@ $parent-class: ".homepg";
     }
     
     @include breakpoints-def(large) {
-
+        .menuButton {
+            none;
+        }
 
     }
 }

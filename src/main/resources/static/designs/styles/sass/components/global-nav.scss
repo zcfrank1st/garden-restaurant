@@ -1,11 +1,35 @@
 $parent-class: ".global-nav";
 
 #{$parent-class} {
-    a {
-        background-color: brown;
+    
+    @include breakpoints-def(xsmall) {
+        text-align: center;
+        position: relative;
+        
+        .garden-sublogo {
+            padding-bottom: 40px;
+        }
+        
+        .garden-menu-mobile {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
     }
     
-    a.active {
-        background-color: darkred;
+     @include breakpoints-def(small) {
+        
+    }
+    
+    @include breakpoints-def(medium) {
+        
+    }
+    
+    @include breakpoints-def(large) {
+        
+    }
+    
+    a {
+        background-color: brown;
     }
 }

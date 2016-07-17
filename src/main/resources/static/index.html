@@ -41,30 +41,43 @@
 
 </head>
 
-<body class="page">
+<body class="page garden-bg">
     
     
-    <nav class="column">
+    <nav class="row">
 
-        <a class="full" ui-sref="home">Logo</a>
-    
-        <ul class="full-five row global-nav">
-            <li ui-sref-active="active">
-                <a ui-sref="menu">Menu</a>
-            </li>
-            <li ui-sref-active="active">
-                <a ui-sref="reservations">reservations</a>
-            </li>
-            <li ui-sref-active="active">
-                <a ui-sref="rewards">rewards</a>
-            </li>
-            <li ui-sref-active="active">
-                <a ui-sref="our story">our story</a>
-            </li>
-            <li ui-sref-active="active">
-                <a ui-sref="contact">contact</a>
-            </li>
-        </ul>
+        <div class="column global-nav">
+            <a class="full garden-logo" ui-sref="home">
+                <img src="/garden-restaurant/src/main/resources/static/images/SZECHUAN GARDEN.png" />
+            </a>
+            <div class="garden-sublogo">
+                <img src="/garden-restaurant/src/main/resources/static/images/authentic%20chinese%20cuisine-1.png" />
+            </div>
+
+            <div class="garden-menu-mobile">
+                <img src="/garden-restaurant/src/main/resources/static/images/logo.png" />
+            </div>
+            
+            <ul class="full-five">
+                <li ui-sref-active="active">
+                    <a ui-sref="menu">Menu</a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="reservations">reservations</a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="rewards">rewards</a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="our story">our story</a>
+                </li>
+                <li ui-sref-active="active">
+                    <a ui-sref="contact">contact</a>
+                </li>
+            </ul>
+
+            <span class="menuButton"></span>
+        </div>
     </nav>
     
     <div ui-view></div>

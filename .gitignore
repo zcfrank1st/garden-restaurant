@@ -6,3 +6,4 @@ mvnw
 mvnw.cmd
 *.tar.gz
 target/
+*.psd

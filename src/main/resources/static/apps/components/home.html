@@ -3,7 +3,7 @@
         <div class="full">
             <uib-carousel active="active" interval="homepgInterval" no-wrap="noWrapSlides">
               <uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
-                <img ng-src="{{slide.image}}">
+                <img ng-src="{{slide.image}}" alt="carousel">
               </uib-slide>
             </uib-carousel>
         </div>
