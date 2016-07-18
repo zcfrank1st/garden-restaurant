@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-var SGardent = angular.module('SGarden', [
+angular.module('SGarden', [
     'ui.router',
     'ngAnimate',
     'ui.bootstrap',
@@ -36,4 +36,9 @@ var SGardent = angular.module('SGarden', [
                     templateUrl: "apps/components/menu.html",
                     controller: "menuCtrl"
                 });
+}])
+
+.controller("homepageCtrl", ['$scope', function($scope){
+    $scope.isCollapsed = false;
+    
 }]);

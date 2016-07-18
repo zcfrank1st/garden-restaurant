@@ -3,7 +3,7 @@ angular.module('SGarden.nav',
     ])
 
     .config(['$stateProvider', function($stateProvider) {
-      $routeProvider
+
           
     }])
     .controller('welcomeCtrl', ['$scope', function($scope){

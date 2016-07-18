@@ -1,35 +1,94 @@
 $parent-class: ".global-nav";
+$global-nav-font-stack: (
+    "ul.garden-menu li":15 15 18 18
+);
 
 #{$parent-class} {
     
-    @include breakpoints-def(xsmall) {
+    @include font-stack($global-nav-font-stack);
+    
+    @include breakpoints-def(small) {
         text-align: center;
         position: relative;
+        color: $color-text-01;
+        
+        .garden-logo img{
+            width: 200px;
+        }
         
         .garden-sublogo {
             padding-bottom: 40px;
+            
+            img {
+                width: 200px;
+            }
+        }
+        
+        ul.garden-menu li{
+            background-color: transparentize($color-bg-01, 0.3);
+            line-height: 40px;
+            border-bottom: 1px solid white;
+            text-transform: capitalize;
+            
+            a {
+                width: 100%;
+            }
+        }
+        
+        ul.garden-menu li:last-child{
+            border-bottom: none;
         }
         
         .garden-menu-mobile {
             position: absolute;
             top: 0;
             left: 0;
+            
+            img {
+                width: 40px;
+            }
         }
-    }
-    
-     @include breakpoints-def(small) {
+        
         
     }
     
     @include breakpoints-def(medium) {
+        .garden-logo img{
+            width: 300px;
+        }
         
+        .garden-sublogo {
+            padding-bottom: 40px;
+            
+            img {
+                width: 300px;
+            }
+        }
+                
     }
     
     @include breakpoints-def(large) {
+        .garden-logo img{
+            width: 600px;
+        }
+        
+        .garden-sublogo {
+            padding-bottom: 40px;
+            
+            img {
+                width: 600px;
+            }
+        }
+        
+        ul.garden-menu li{
+            border-bottom: none;
+        }
         
     }
     
-    a {
-        background-color: brown;
+    @include breakpoints-def(xlarge) {
+        
     }
+    
+
 }

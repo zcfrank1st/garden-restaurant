@@ -1,6 +1,11 @@
 $color-01: #ffffff !default; //white
-$color-02: #000;
-
+$color-02: #000000 !default;
+$color-03: #ffc979 !default;
+$color-04: #39312d !default;
     
     // background colors
-$color-bg-01: $color-01;
+$color-bg-01: $color-04;
+
+
+// text color
+$color-text-01: $color-03;

@@ -44,7 +44,7 @@
 <body class="page garden-bg">
     
     
-    <nav class="row">
+    <nav class="row"  ng-controller="homepageCtrl">
 
         <div class="column global-nav">
             <a class="full garden-logo" ui-sref="home">
@@ -54,11 +54,11 @@
                 <img src="/garden-restaurant/src/main/resources/static/images/authentic%20chinese%20cuisine-1.png" />
             </div>
 
-            <div class="garden-menu-mobile">
-                <img src="/garden-restaurant/src/main/resources/static/images/logo.png" />
+            <div class="garden-menu-mobile" ng-click="isCollapsed = !isCollapsed">
+                <img src="/garden-restaurant/src/main/resources/static/images/navigate.png" />
             </div>
             
-            <ul class="full-five">
+            <ul class="full-five garden-menu" uib-collapse="isCollapsed">
                 <li ui-sref-active="active">
                     <a ui-sref="menu">Menu</a>
                 </li>
@@ -76,7 +76,6 @@
                 </li>
             </ul>
 
-            <span class="menuButton"></span>
         </div>
     </nav>
     
@@ -89,6 +88,7 @@
     <!--    TODO: change to the server path later-->
     <script src="/garden-restaurant/src/main/resources/static/designs/scripts/app.js"></script>
     <script src="/garden-restaurant/src/main/resources/static/designs/scripts/components/global-nav.js"></script>
+    <script src="/garden-restaurant/src/main/resources/static/designs/scripts/components/home.js"></script>
     
 </body>
     
