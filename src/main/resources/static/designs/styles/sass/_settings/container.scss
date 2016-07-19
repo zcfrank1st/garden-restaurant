@@ -6,6 +6,7 @@ $page-container: ".page";
 
 #{$page-container} {
     @include outer-container($max-width);
+    min-width: $min-width;
 }
 
 // column container class

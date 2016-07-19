@@ -2,6 +2,8 @@
 
 // Declare app level module which depends on views, and components
 angular.module('SGarden', [
+    'ngRoute',
+    'ngResource',
     'ui.router',
     'ngAnimate',
     'ui.bootstrap',
