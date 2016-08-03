@@ -9,11 +9,16 @@
      }
 
     .garden-bg {
-        background: url("/garden-restaurant/src/main/resources/static/images/garden-bg.png") no-repeat center fixed;
+        background: url("../../../../images/garden-bg.png") no-repeat center fixed;
+        
         width: 100%;
         background-size: cover;
         padding: 50px 0;
-    }    
+    }
+     
+     .row.bleed {
+        padding: 0 !important;
+     }
 }
 
 @include breakpoints-def(medium) {

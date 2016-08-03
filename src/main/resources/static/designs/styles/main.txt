@@ -1,2 +1,2 @@
 
-sass --watch D:\Projects\MiaoRestaurant\garden-restaurant\src\main\resources\static\designs\styles\sass\main.scss:D:\Projects\MiaoRestaurant\garden-restaurant\src\main\resources\static\designs\styles\main.css
+sass --watch D:\Projects\garden-restaurant\src\main\resources\static\designs\styles\sass\main.scss:D:\Projects\garden-restaurant\src\main\resources\static\designs\styles\main.css

@@ -1,0 +1,82 @@
+$parent-class: ".global-footer";
+$global-footer-font-stack: (
+    "ul li p":15 15 15 15,
+    "ul li table td":15 15 15 15,
+    "ul li h4":15 15 21 21
+);
+
+#{$parent-class} {
+    @include font-stack($global-footer-font-stack);
+    
+    @include breakpoints-def(small) {
+        color: $color-text-01;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        
+        .footer-logo {
+            opacity: 0.3;
+            width: 10%;
+        }
+        
+        li {
+            h4 {
+                display: none; 
+            }
+            
+            p {
+                line-height: em(24);
+                display: inline-block;
+            }
+            
+        }
+        
+        .buz-hour {
+            display: none;
+            
+            tr {
+                line-height: em(24);   
+            }
+            
+            tr td:first-child {
+                padding-right: 20px;
+            }
+            
+            tr td:last-child {
+                width: 80px;
+                text-align: right;
+            }
+        }
+        
+    }
+    
+    @include breakpoints-def(medium) {
+
+
+    }
+    
+    @include breakpoints-def(large) {
+        text-align: left;
+        line-height: em(12);
+                
+        li {
+            h4 {
+                display: block;
+                padding-bottom: 14px;
+            }   
+            p {
+                display: block;
+            }
+        }
+        
+        .footer-logo {
+            width: 83px;
+            margin-left: 30%;
+        }
+        
+        li.buz-hour {
+            display: block;
+        }
+        
+    }
+}

@@ -20,7 +20,7 @@ angular.module('SGarden', [
   ]
 )
 
-.config([       '$stateProvider', '$locationProvider', '$urlRouterProvider', 
+.config([       '$stateProvider', '$locationProvider', '$urlRouterProvider',
         function($stateProvider,   $locationProvider,   $urlRouterProvider) {
             $locationProvider.html5Mode(true);
 
@@ -30,17 +30,19 @@ angular.module('SGarden', [
             $stateProvider
                 .state("home", {
                     url:"/",
-                    templateUrl: "apps/components/home.html",
-                    controller: "homeCtrl"
+                    templateUrl: "apps/components/homepg.html",
+                    controller: "homepgCtrl"
                 })
                 .state("menu", {
                     url:"/menu",
                     templateUrl: "apps/components/menu.html",
                     controller: "menuCtrl"
                 });
+            
+            
 }])
 
-.controller("homepageCtrl", ['$scope', function($scope){
+.controller("globalCtrl", ['$scope', function($scope){
     $scope.isCollapsed = false;
     
 }]);

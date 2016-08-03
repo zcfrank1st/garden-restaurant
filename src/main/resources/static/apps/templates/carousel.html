@@ -1,0 +1,54 @@
+<div ng-controller="homepgCtrl">
+<div ng-transclude ></div>
+<div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+    <img ng-src="{{slide.image}}" alt="carousel">
+</div>
+<a class="left carousel-control" ng-show="slides.length > 1" ng-class="{ disabled: isPrevDisabled() }" ng-click="prev()" href="" role="button">
+
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+</a>
+
+<a class="right carousel-control" ng-show="slides.length > 1" ng-class="{ disabled: isNextDisabled() }" ng-click="next()" href="" role="button">
+
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only"></span>
+
+</a>
+<ol class="carousel-indicators" ng-show="slides.length > 1">
+
+    <!--
+
+     ngRepeat: slide in slides | orderBy:indexOfSlide …
+
+    -->
+    <li class="ng-scope" ng-click="select(slide)" ng-class="{ active: isActive(slide) }" ng-repeat="slide in slides | orderBy:indexOfSlide track by $index" style=""></li>
+
+    <!--
+
+     end ngRepeat: slide in slides | orderBy:indexOfSl…
+
+    -->
+
+    <li class="ng-scope" ng-click="select(slide)" ng-class="{ active: isActive(slide) }" ng-repeat="slide in slides | orderBy:indexOfSlide track by $index" style=""></li>
+
+    <!--
+
+     end ngRepeat: slide in slides | orderBy:indexOfSl…
+
+    -->
+
+    <li class="ng-scope active" ng-click="select(slide)" ng-class="{ active: isActive(slide) }" ng-repeat="slide in slides | orderBy:indexOfSlide track by $index" style=""></li>
+
+    <!--
+
+     end ngRepeat: slide in slides | orderBy:indexOfSl…
+
+    -->
+
+    <li class="ng-scope" ng-click="select(slide)" ng-class="{ active: isActive(slide) }" ng-repeat="slide in slides | orderBy:indexOfSlide track by $index" style=""></li>
+
+  
+
+</ol>
+    </div>

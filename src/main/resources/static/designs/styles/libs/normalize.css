@@ -431,6 +431,9 @@ ul {
     padding-left: 0;
     margin: 0;
 }
-li{
+h4, p, li{
     margin: 0;
+}
+a, a:hover, a:visited {
+    text-decoration: none;
 }

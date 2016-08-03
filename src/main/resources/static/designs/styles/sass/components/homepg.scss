@@ -1,0 +1,72 @@
+$parent-class: ".homepg";
+$homepg-font-stack: (
+    "ul li h4":25 25 25 25,
+    "ul li p":18 18 18 18,
+   
+);
+
+#{$parent-class} {
+    @include font-stack($homepg-font-stack);
+    
+    @include breakpoints-def(small) {
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        
+        
+        
+        .homepg-caoursel {
+            height:auto;
+            width: 100%;
+            margin-bottom: 60px;
+            
+            img {
+                width: 100%;
+            }
+        }
+        
+        
+        
+        .homepg-panel li{
+            background-color: transparentize($color-bg-01, 0.5);
+            min-height: 240px;
+            color: transparentize($color-text-03, 0.3);
+            
+            
+        }
+        
+        .homepg-panel {
+            display: none;
+            margin-bottom: 60px;
+            
+        }
+
+    }
+    
+    @include breakpoints-def(medium) {
+
+
+    }
+    
+    @include breakpoints-def(large) {
+        .homepg-caoursel {
+           
+        }
+
+        .homepg-panel{
+            display: block;
+        }
+         .homepg-panel ul{
+             overflow: hidden;
+             li > div {
+                width: 100%;  
+                 padding-top: 30%;
+                 padding-right: 20px;
+             }
+             
+             li h4{
+                padding-bottom: 25px;
+             }
+        }
+    }
+}
+
