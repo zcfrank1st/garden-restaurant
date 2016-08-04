@@ -2,6 +2,7 @@
  @include breakpoints-def(small) {
     body {
         background-color: $color-bg-01;
+        font-family: FFMetaWebProNormal,Arial,Helvetica,sans-serif;
     }
      
      a {

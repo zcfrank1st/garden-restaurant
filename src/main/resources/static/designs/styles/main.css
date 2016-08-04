@@ -413,7 +413,8 @@ body {
     .column .full-four li:last-child, .column .full-four div:last-child, .column .full-four a:last-child {
       margin-right: 0; } }
 body {
-  background-color: #39312d; }
+  background-color: #39312d;
+  font-family: FFMetaWebProNormal,Arial,Helvetica,sans-serif; }
 
 a {
   cursor: pointer; }
@@ -473,7 +474,7 @@ a {
       .homepg .homepg-panel ul li > div {
         width: 100%;
         padding-top: 30%;
-        padding-right: 20px; }
+        padding-left: 20px; }
       .homepg .homepg-panel ul li h4 {
         padding-bottom: 25px; } }
 
@@ -576,33 +577,33 @@ a {
   .global-footer .footer-logo {
     opacity: 0.3;
     width: 10%; }
-  .global-footer li h4 {
+  .global-footer > ul li h4 {
     display: none; }
-  .global-footer li p {
+  .global-footer > ul li p {
     line-height: 1.5em;
     display: inline-block; }
-  .global-footer .buz-hour {
+  .global-footer > ul li.buz-hour {
     display: none; }
-    .global-footer .buz-hour tr {
+    .global-footer > ul li.buz-hour tr {
       line-height: 1.5em; }
-    .global-footer .buz-hour tr td:first-child {
+    .global-footer > ul li.buz-hour tr td:first-child {
       padding-right: 20px; }
-    .global-footer .buz-hour tr td:last-child {
+    .global-footer > ul li.buz-hour tr td:last-child {
       width: 80px;
       text-align: right; }
   @media screen and (min-width: 61.25em) {
     .global-footer {
       text-align: left;
       line-height: 0.75em; }
-      .global-footer li h4 {
+      .global-footer > ul li h4 {
         display: block;
         padding-bottom: 14px; }
-      .global-footer li p {
+      .global-footer > ul li p {
         display: block; }
       .global-footer .footer-logo {
         width: 83px;
         margin-left: 30%; }
-      .global-footer li.buz-hour {
+      .global-footer > ul li.buz-hour {
         display: block; } }
 
 /*# sourceMappingURL=main.css.map */

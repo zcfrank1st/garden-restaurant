@@ -19,7 +19,7 @@ $global-footer-font-stack: (
             width: 10%;
         }
         
-        li {
+       > ul li {
             h4 {
                 display: none; 
             }
@@ -31,7 +31,7 @@ $global-footer-font-stack: (
             
         }
         
-        .buz-hour {
+        > ul li.buz-hour {
             display: none;
             
             tr {
@@ -59,7 +59,7 @@ $global-footer-font-stack: (
         text-align: left;
         line-height: em(12);
                 
-        li {
+        >ul li {
             h4 {
                 display: block;
                 padding-bottom: 14px;
@@ -74,7 +74,7 @@ $global-footer-font-stack: (
             margin-left: 30%;
         }
         
-        li.buz-hour {
+        >ul li.buz-hour {
             display: block;
         }
         

@@ -30,7 +30,7 @@ angular.module('SGarden.homepg', [
 
 
     for (var i = 0; i < 2; i++) {
-                slides.push({
+        slides.push({
           image: "images/Find Us.png",
           id: currIndex++
         });
