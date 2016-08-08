@@ -1,5 +1,10 @@
 // define the container of the website
 
+@mixin omega-reset($nth) {
+  &:nth-child(#{$nth}) { margin-right: flex-gutter(); }
+  &:nth-child(#{$nth}+1) { clear: none }
+}
+
 // page container class
 $page-container: ".page";
 
@@ -27,7 +32,7 @@ $column-grid-stack:(
 // inline block row
 $column-parent: ".row";
 
-$column-children: "li, div, a";
+$column-children: ("li", "a");
 
 // column padding value
 $column-spacing: (18,30,80,90);
@@ -55,11 +60,21 @@ $column-spacing: (18,30,80,90);
         @include breakpoints-def($bq) {
             #{$selector} {
                 @each $value in $stack {
-                    $col:12/nth(nth($value,2),$i);
+                    $colNum: nth(nth($value,2),$i);
+                   
+                    $col:12/$colNum;
                     #{nth($value,1)} {
-                        #{$column-children}
-                        {
-                            @include span-columns ($col);
+                        @each $child in $column-children {
+                            #{$child}
+                            {
+                                @if $i > 1 {
+                                    $prev: $i - 1;
+                                 $pre-colNum: nth(nth($value,2),$prev);
+                                @include omega-reset(#{$pre-colNum}n);
+                            }
+                                @include span-columns ($col);
+                                @include omega(#{$colNum}n);
+                            }
                         }
                     };
                 }

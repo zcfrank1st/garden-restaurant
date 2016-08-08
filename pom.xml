@@ -186,7 +186,18 @@
 					<exclude>env/**</exclude>
 					<exclude>generator/**</exclude>
 					<exclude>config/**</exclude>
+					<exclude>**/*.woff</exclude>
+					<exclude>**/*.ttf</exclude>
 				</excludes>
+			</resource>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+
+				<includes>
+					<include>**/*.woff</include>
+					<include>**/*.ttf</include>
+				</includes>
 			</resource>
 			<resource>
 				<directory>src/main/java/com/chaos/garden/dao/mapper/gen</directory>

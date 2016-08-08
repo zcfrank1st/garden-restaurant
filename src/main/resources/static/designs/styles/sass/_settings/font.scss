@@ -1,8 +1,14 @@
+@font-face {
+    font-family: BrushedTrav;
+    src: url("/designs/styles/fonts/Brushed Traveler.ttf") format('truetype');
+}
+
 $font-stack-deafult: (
     "body": (12,12,15,15)
 );
 
-$font-family-web: Arial, Helvetica, sans-serif !default;
+$font-family-web: Arial, Helvetica, sans-serif !global;
+$font-family-brush: BrushedTrav !global;
 
 @mixin font-stack ($stack: $font-stack-deafult) {
     @for $i from 1 through $breakpoint-number {

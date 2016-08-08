@@ -26,18 +26,22 @@ $homepg-font-stack: (
         
         
         
-        .homepg-panel li{
+        .homepg-panel li, .homepg-panel-small li{
             background-color: transparentize($color-bg-01, 0.5);
             min-height: 240px;
             color: transparentize($color-text-03, 0.3);
-            
-            
+            margin-bottom: 20px;
         }
         
         .homepg-panel {
             display: none;
+            margin-bottom: 60px;  
+        }
+        
+        .homepg-panel-small {
+            display: block;
             margin-bottom: 60px;
-            
+            font-family: $font-family-brush;
         }
 
     }
@@ -55,10 +59,14 @@ $homepg-font-stack: (
         .homepg-panel{
             display: block;
         }
+        
+        .home-panel-small {
+            display: none;
+        }
          .homepg-panel ul{
              overflow: hidden;
              li > div {
-                width: 100%;  
+                 width: 100%;  
                  padding-top: 30%;
                  padding-left: 20px;
              }
