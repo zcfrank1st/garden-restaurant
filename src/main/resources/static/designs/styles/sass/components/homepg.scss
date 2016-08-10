@@ -29,19 +29,34 @@ $homepg-font-stack: (
         .homepg-panel li, .homepg-panel-small li{
             background-color: transparentize($color-bg-01, 0.5);
             min-height: 240px;
-            color: transparentize($color-text-03, 0.3);
+            
             margin-bottom: 20px;
+        }
+        
+        .homepg-panel, .homepg-panel-small {
+
+             li > div {
+                 width: 100%;  
+                 padding-top: 100px;
+                 padding-left: 20px;
+             }
+             
+             li h4{
+                padding-bottom: 25px;
+             }
         }
         
         .homepg-panel {
             display: none;
             margin-bottom: 60px;  
+            color: transparentize($color-text-03, 0.3);
         }
         
         .homepg-panel-small {
             display: block;
             margin-bottom: 60px;
             font-family: $font-family-brush;
+            color: $color-text-01;
         }
 
     }
@@ -60,21 +75,11 @@ $homepg-font-stack: (
             display: block;
         }
         
-        .home-panel-small {
+        .homepg-panel-small  {
             display: none;
         }
-         .homepg-panel ul{
-             overflow: hidden;
-             li > div {
-                 width: 100%;  
-                 padding-top: 30%;
-                 padding-left: 20px;
-             }
-             
-             li h4{
-                padding-bottom: 25px;
-             }
-        }
+        
+        
     }
 }
 

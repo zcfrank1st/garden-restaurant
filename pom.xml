@@ -186,8 +186,7 @@
 					<exclude>env/**</exclude>
 					<exclude>generator/**</exclude>
 					<exclude>config/**</exclude>
-					<exclude>**/*.woff</exclude>
-					<exclude>**/*.ttf</exclude>
+					<exclude>static/fonts/**</exclude>
 				</excludes>
 			</resource>
 			<resource>
@@ -195,8 +194,7 @@
 				<filtering>true</filtering>
 
 				<includes>
-					<include>**/*.woff</include>
-					<include>**/*.ttf</include>
+					<include>static/fonts/**</include>
 				</includes>
 			</resource>
 			<resource>

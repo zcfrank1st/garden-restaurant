@@ -43,6 +43,11 @@ angular.module('SGarden', [
 }])
 
 .controller("globalCtrl", ['$scope', function($scope){
-    $scope.isCollapsed = false;
+    $scope.navToggle = false;
+    $scope.showMenu = function(){
+         $scope.navToggle = !$scope.navToggle;
+    };
+    
+    
     
 }]);

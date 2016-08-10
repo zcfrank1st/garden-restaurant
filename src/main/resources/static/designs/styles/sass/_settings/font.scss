@@ -1,6 +1,8 @@
+
 @font-face {
-    font-family: BrushedTrav;
-    src: url("/designs/styles/fonts/Brushed Traveler.ttf") format('truetype');
+  font-family: 'Rock Salt';
+  font-weight: normal;
+  font-style: normal;
 }
 
 $font-stack-deafult: (
@@ -8,7 +10,7 @@ $font-stack-deafult: (
 );
 
 $font-family-web: Arial, Helvetica, sans-serif !global;
-$font-family-brush: BrushedTrav !global;
+$font-family-brush: 'Rock Salt' !global;
 
 @mixin font-stack ($stack: $font-stack-deafult) {
     @for $i from 1 through $breakpoint-number {

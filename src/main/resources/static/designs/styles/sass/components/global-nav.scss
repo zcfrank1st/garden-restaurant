@@ -24,8 +24,15 @@ $global-nav-font-stack: (
             }
         }
         
-        ul.garden-menu {
-            display: none;
+        ul.garden-menu .navToggle li{
+            //transform: scale(1, 1);
+            opacity: 1;
+        }
+        
+        ul.garden-menu li{
+            transition: all linear 0.5s;
+            opacity: 1;
+            
         }
         
         ul.garden-menu li{
@@ -99,6 +106,7 @@ $global-nav-font-stack: (
         
         ul.garden-menu {
             display: block;
+            
         }
         
         ul.garden-menu li{

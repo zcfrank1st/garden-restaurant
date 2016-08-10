@@ -32,6 +32,7 @@
 -->
 <!--    TODO: change to the server path later-->
     <link type="text/css" rel="stylesheet" href="designs/styles/libs/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="designs/styles/main.css">
     
 
@@ -54,18 +55,19 @@
     <nav class="row"  ng-controller="globalCtrl">
 
         <div class="column global-nav">
+            <!-- Logo -->
             <a class="full garden-logo" ui-sref="home">
                 <img src="images/SZECHUAN GARDEN.png" />
             </a>
             <div class="garden-sublogo">
                 <img src="images/authentic%20chinese%20cuisine-1.png" />
             </div>
-
-            <div class="garden-menu-mobile" ng-click="isCollapsed = !isCollapsed">
+            <!-- Mobile Menu Bar-->
+            <div class="garden-menu-mobile" ng-click="showMenu()">
                 <img src="images/navigate.png" />
             </div>
             
-            <ul class="full-five garden-menu">
+            <ul class="full-five garden-menu" ng-class="{navToggle: navToggle}" ng-show="navToggle">
                 <li ui-sref-active="active">
                     <a ui-sref="menu">Menu</a>
                 </li>
