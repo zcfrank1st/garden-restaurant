@@ -1265,50 +1265,60 @@ li > .view {
 .homepg {
   letter-spacing: 1px;
   text-transform: uppercase; }
-  .homepg ul li h4 {
+  .homepg ul li a {
     font-size: 1.5625em; }
   .homepg ul li p {
     font-size: 1.125em; }
   @media screen and (min-width: 40em) {
-    .homepg ul li h4 {
+    .homepg ul li a {
       font-size: 1.5625em; }
     .homepg ul li p {
       font-size: 1.125em; } }
   @media screen and (min-width: 61.25em) {
-    .homepg ul li h4 {
+    .homepg ul li a {
       font-size: 1.5625em; }
     .homepg ul li p {
       font-size: 1.125em; } }
   @media screen and (min-width: 64em) {
-    .homepg ul li h4 {
+    .homepg ul li a {
       font-size: 1.5625em; }
     .homepg ul li p {
       font-size: 1.125em; } }
   .homepg .homepg-caoursel {
     height: auto;
     width: 100%;
-    margin-bottom: 60px; }
+    margin-bottom: 30px; }
     .homepg .homepg-caoursel img {
       width: 100%; }
   .homepg .homepg-panel li, .homepg .homepg-panel-small li {
     background-color: rgba(57, 49, 45, 0.5);
-    min-height: 240px;
     margin-bottom: 20px; }
-  .homepg .homepg-panel li > div, .homepg .homepg-panel-small li > div {
-    width: 100%;
-    padding-top: 100px;
+  .homepg .homepg-panel li .view, .homepg .homepg-panel-small li .view {
     padding-left: 20px; }
-  .homepg .homepg-panel li h4, .homepg .homepg-panel-small li h4 {
-    padding-bottom: 25px; }
+  .homepg .homepg-panel li > a, .homepg .homepg-panel-small li > a {
+    padding-bottom: 25px;
+    width: 100%;
+    min-height: 160px; }
   .homepg .homepg-panel {
     display: none;
     margin-bottom: 60px;
     color: rgba(255, 255, 255, 0.7); }
+    .homepg .homepg-panel li {
+      min-height: 280px; }
+    .homepg .homepg-panel li .view {
+      padding-top: 100px; }
+    .homepg .homepg-panel li .view a {
+      width: 100%;
+      padding-bottom: 10px; }
   .homepg .homepg-panel-small {
     display: block;
     margin-bottom: 60px;
     font-family: "Rock Salt";
     color: #ffc979; }
+    .homepg .homepg-panel-small li {
+      min-height: 160px; }
+    .homepg .homepg-panel-small li .view {
+      padding-top: 55px; }
   @media screen and (min-width: 61.25em) {
     .homepg .homepg-panel {
       display: block; }
@@ -1331,16 +1341,20 @@ li > .view {
     .global-nav ul.garden-menu li {
       font-size: 1.125em; } }
   .global-nav .garden-logo img {
-    width: 200px; }
+    width: 300px; }
   .global-nav .garden-sublogo {
     padding-bottom: 40px; }
     .global-nav .garden-sublogo img {
-      width: 200px; }
-  .global-nav ul.garden-menu .navToggle li {
-    opacity: 1; }
-  .global-nav ul.garden-menu li {
-    transition: all linear 0.5s;
-    opacity: 1; }
+      width: 300px; }
+  .global-nav .slideup, .global-nav .slidedown {
+    max-height: 0;
+    overflow-y: hidden;
+    -webkit-transition: max-height 0.8s ease-in-out;
+    -moz-transition: max-height 0.8s ease-in-out;
+    -o-transition: max-height 0.8s ease-in-out;
+    transition: max-height 0.8s ease-in-out; }
+  .global-nav .slidedown {
+    max-height: 207px; }
   .global-nav ul.garden-menu li {
     background-color: rgba(57, 49, 45, 0.7);
     line-height: 40px;
@@ -1352,7 +1366,7 @@ li > .view {
     border-bottom: none; }
   .global-nav .garden-menu-mobile {
     position: absolute;
-    top: 0;
+    top: 15px;
     left: 0;
     cursor: pointer; }
     .global-nav .garden-menu-mobile img {
@@ -1361,13 +1375,6 @@ li > .view {
     color: #ffc979; }
   .global-nav a:visited {
     color: #ffc979; }
-  @media screen and (min-width: 40em) {
-    .global-nav .garden-logo img {
-      width: 300px; }
-    .global-nav .garden-sublogo {
-      padding-bottom: 40px; }
-      .global-nav .garden-sublogo img {
-        width: 300px; } }
   @media screen and (min-width: 61.25em) {
     .global-nav .garden-logo img {
       width: 600px; }
@@ -1378,7 +1385,8 @@ li > .view {
     .global-nav .garden-menu-mobile {
       display: none; }
     .global-nav ul.garden-menu {
-      display: block; }
+      display: block;
+      max-height: 100%; }
     .global-nav ul.garden-menu li {
       border-bottom: none; } }
 

@@ -13,26 +13,27 @@ $global-nav-font-stack: (
         color: $color-text-01;
         
         .garden-logo img{
-            width: 200px;
+            width: 300px;
         }
         
         .garden-sublogo {
             padding-bottom: 40px;
             
             img {
-                width: 200px;
+                width: 300px;
             }
         }
         
-        ul.garden-menu .navToggle li{
-            //transform: scale(1, 1);
-            opacity: 1;
+        .slideup, .slidedown {
+            max-height: 0;            
+            overflow-y: hidden;
+            -webkit-transition: max-height 0.8s ease-in-out;
+            -moz-transition: max-height 0.8s ease-in-out;
+            -o-transition: max-height 0.8s ease-in-out;
+            transition: max-height 0.8s ease-in-out;
         }
-        
-        ul.garden-menu li{
-            transition: all linear 0.5s;
-            opacity: 1;
-            
+        .slidedown {            
+            max-height: 207px ;                    
         }
         
         ul.garden-menu li{
@@ -53,7 +54,7 @@ $global-nav-font-stack: (
         
         .garden-menu-mobile {
             position: absolute;
-            top: 0;
+            top: 15px;
             left: 0;
             cursor: pointer;
             
@@ -73,18 +74,7 @@ $global-nav-font-stack: (
     }
     
     @include breakpoints-def(medium) {
-        .garden-logo img{
-            width: 300px;
-        }
         
-        .garden-sublogo {
-            padding-bottom: 40px;
-            
-            img {
-                width: 300px;
-            }
-        }
-                
     }
     
     @include breakpoints-def(large) {
@@ -106,7 +96,7 @@ $global-nav-font-stack: (
         
         ul.garden-menu {
             display: block;
-            
+            max-height: 100%;
         }
         
         ul.garden-menu li{
