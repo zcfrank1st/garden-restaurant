@@ -48,6 +48,22 @@ $global-footer-font-stack: (
             }
         }
         
+        > ul li.contactSection {
+            .contact {
+                padding-bottom: 40px;
+            }
+            
+            .socialSite li{
+                padding-right: 15px;
+            }
+            
+            .socialSite img {
+                width: 80px;
+                height: auto;
+            }
+            
+        }
+        
     }
     
     @include breakpoints-def(medium) {

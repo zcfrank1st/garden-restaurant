@@ -7,7 +7,11 @@ angular.module('SGarden', [
     'ui.router',
     'ngAnimate',
     'ui.bootstrap',
-    'SGarden.homepg'
+    'SGarden.homepg',
+    'SGarden.menu',
+    'SGarden.menu.list',
+    'SGarden.menu.service'
+
 ])
 
 .run(
@@ -32,11 +36,6 @@ angular.module('SGarden', [
                     url:"/",
                     templateUrl: "apps/components/homepg.html",
                     controller: "homepgCtrl"
-                })
-                .state("menu", {
-                    url:"/menu",
-                    templateUrl: "apps/components/menu.html",
-                    controller: "menuCtrl"
                 });
             
             
@@ -46,8 +45,5 @@ angular.module('SGarden', [
     $scope.navToggle = false;
     $scope.showMenu = function(){
          $scope.navToggle = !$scope.navToggle;
-    };
-    
-    
-    
+    };   
 }]);

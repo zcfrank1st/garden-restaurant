@@ -65,7 +65,7 @@ $column-spacing: (18,30,80,90);
                     $col:12/$colNum;
                     #{nth($value,1)} {
                         @each $child in $column-children {
-                            #{$child}
+                            >#{$child}
                             {
                                 @if $i > 1 {
                                     $prev: $i - 1;

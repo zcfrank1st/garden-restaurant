@@ -431,8 +431,9 @@ ul {
     padding-left: 0;
     margin: 0;
     overflow: hidden;
+    list-style-type: none;
 }
-h4, p, li{
+h4, h6, p, li{
     margin: 0;
 }
 a, a:hover, a:visited {

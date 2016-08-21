@@ -1,0 +1,20 @@
+<table class="menu-list" ng-controller="menuListCtrl">
+    
+    {{ajMenuItems}}
+    
+    <tr ng-repeat="item in ajMenuItems.menuItems">
+        <td class="menu-pic">
+<!--            <img src="{{item.menuPic}}">-->
+        </td>
+
+        <td>
+            <div class="menu-desc">
+                <h4 class="menu-item-name">{{item.menuName}}</h4>
+                <p>{{item.menuDesc}}</p>
+                <img ng-show="{{item.menuSpicy}}" class="menu-flavor" src="images/fire.png">
+                <img ng-show="{{item.menuVege}}" class="menu-flavor" src="images/clover.png">
+                <span class="menu-item-price">{{item.menuPrice}}</span>
+            </div>
+        </td>
+    </tr>
+</table>

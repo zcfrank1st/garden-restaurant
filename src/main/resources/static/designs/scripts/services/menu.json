@@ -1,0 +1,40 @@
+{
+    "main": {
+        "menuSubtitle": "" ,
+        "menuItems": [{
+        "menuPic": "images/roastduck.png",
+        "menuName": "Peking Duck",
+        "menuDesc": "Juicy!",
+        "menuSpicy":true,
+        "menuVege":false,
+        "menuPrice": "$38.00"
+        },
+        {
+        "menuPic": "images/roastduck.png",
+        "menuName": "Peking Duck",
+        "menuDesc": "Juicy!",
+        "menuSpicy":true,
+        "menuVege":false,
+        "menuPrice": "$38.00"
+        }
+    ]},
+    "lunch menu": {
+        "menuSubtitle": "" ,
+        "menuItems": [{
+        "menuPic": "images/roastduck.png",
+        "menuName": "Peking Duck",
+        "menuDesc": "Juicy!",
+        "menuSpicy":true,
+        "menuVege":false,
+        "menuPrice": "$38.00"
+        },
+        {
+        "menuPic": "images/roastduck.png",
+        "menuName": "Peking Duck",
+        "menuDesc": "Juicy!",
+        "menuSpicy":true,
+        "menuVege":false,
+        "menuPrice": "$38.00"
+        }
+    ]}
+}
