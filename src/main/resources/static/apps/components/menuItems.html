@@ -1,20 +1,35 @@
-<table class="menu-list" ng-controller="menuListCtrl">
-    
-    {{ajMenuItems}}
-    
-    <tr ng-repeat="item in ajMenuItems.menuItems">
-        <td class="menu-pic">
-<!--            <img src="{{item.menuPic}}">-->
-        </td>
+<div class="view menu-items">
+    <ul class="menu-items-header">
+        <li>
+            <img src="images/fire.png">
+            <span>Spicy</span>
+        </li>
+        <li>
+            <img src="images/clover.png">
+            <span>Vegetarian</span>
+        </li>
+        <li class="menuBack">
+            <span><a ui-sref="menu.list">Go Back</a></span>
+        </li>
+    </ul>
+     <table class="menu-list">
+        <tr ng-repeat="item in ajMenuItems.menuItems">
+            <td class="menu-pic">
+                <img src="{{item.menuPic}}">
+            </td>
 
-        <td>
-            <div class="menu-desc">
-                <h4 class="menu-item-name">{{item.menuName}}</h4>
-                <p>{{item.menuDesc}}</p>
-                <img ng-show="{{item.menuSpicy}}" class="menu-flavor" src="images/fire.png">
-                <img ng-show="{{item.menuVege}}" class="menu-flavor" src="images/clover.png">
-                <span class="menu-item-price">{{item.menuPrice}}</span>
-            </div>
-        </td>
-    </tr>
-</table>
+            <td>
+                <div class="menu-desc">
+                    <h4 class="menu-item-name">{{item.menuName}}</h4>
+                    <p>{{item.menuDesc}}</p>
+                    <img ng-show="{{item.menuSpicy}}" class="menu-flavor" src="images/fire.png">
+                    <img ng-show="{{item.menuVege}}" class="menu-flavor" src="images/clover.png">
+                    <span class="menu-item-price">{{item.menuPrice}}</span>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+

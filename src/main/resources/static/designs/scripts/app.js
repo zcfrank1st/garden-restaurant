@@ -9,7 +9,7 @@ angular.module('SGarden', [
     'ui.bootstrap',
     'SGarden.homepg',
     'SGarden.menu',
-    'SGarden.menu.list',
+    'SGarden.menu.items',
     'SGarden.menu.service'
 
 ])

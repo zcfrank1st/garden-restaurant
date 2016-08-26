@@ -11,6 +11,7 @@ angular.module('SGarden.menu', [
 
             $stateProvider
                 .state("menu", {
+                    abstract: true,
                     url:"/menu",
                     templateUrl: "apps/components/menu.html",
                     resolve: {
@@ -18,17 +19,25 @@ angular.module('SGarden.menu', [
                               function( menuService){
 
                                 return menuService.menuList();                          
-                              }]
-                          },
+                          }]
+                      },
                     controller: ['$scope', '$state', 'menuService',
                         function($scope, $state, menuService){
  
                         $scope.ajMenuCategory = menuService.data;
 
-                        $state.go('menu.detail', { menuCategory: "main" });
+                        $state.go('menu.list');
                     }]
+                })
+                .state("menu.list", {
+                
+                    url:"",
+                    views: {
+                        "menuList": {
+                            templateUrl: "apps/components/menuList.html"
+                        }
+                    }
                     
-
                 });
                        
 }]);

@@ -1,0 +1,12 @@
+<div class="view menu-list">
+
+    <div ng-repeat="(key, value) in ajMenuCategory" ui-sref-active="active" class="menu-list-panel">
+        <a ui-sref="menu.items({menuCategory:key})">
+            <span class="menu-list-title">
+                {{key}}
+
+            </span>
+        </a>
+    </div>                     
+
+</div> 

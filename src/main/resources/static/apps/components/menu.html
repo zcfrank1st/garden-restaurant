@@ -4,9 +4,9 @@
             <ul class="large-one-forth">
                 <li>
                     <div class="view side-menu">
-                        <ul >
+                        <ul>
                             <li ng-repeat="(key, value) in ajMenuCategory" ui-sref-active="active">
-                                <a ui-sref="menu.detail({menuCategory:{{key}}})" class="side-menu-title" >
+                                <a ui-sref="menu.items({menuCategory:key})" class="side-menu-title" >
                                     <h4>{{key}}</h4>
                                     <h6>{{value.menuSubtitle}}</h6>
                                 </a>
@@ -16,20 +16,11 @@
                 </li>
 
                 <li>
-                    <div class="view menu-items">
-                        <ul class="menu-items-header">
-                            <li>
-                                <img src="images/fire.png">
-                                <span>Spicy</span>
-                            </li>
-                            <li>
-                                <img src="images/clover.png">
-                                <span>Vegetarian</span>
-                            </li>
-                        </ul>
-                         <div ui-view="menuCategList" ></div>
+                    <div ui-view="menuList" ></div>
+
+                    <div ui-view="menuItems" ></div>
                         
-                    </div>
+                    
                 </li>
             </ul>
         </div>

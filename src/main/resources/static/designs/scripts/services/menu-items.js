@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('SGarden.menu.list', [
+angular.module('SGarden.menu.items', [
     'ngRoute',
     'ngResource',
     'ui.router'
@@ -10,10 +10,10 @@ angular.module('SGarden.menu.list', [
     function ($stateProvider,   $urlRouterProvider){
 
             $stateProvider
-                .state("menu.detail", {
+                .state("menu.items", {
                     url:"/{menuCategory}",            
                     views: {
-                        'menuCategList' : {
+                        'menuItems' : {
                             templateUrl: "apps/components/menuItems.html",
                                                 
                             resolve: {
@@ -22,21 +22,19 @@ angular.module('SGarden.menu.list', [
 
                                     return menuService.menuList();                          
                                 }]
-                            }，
-                            controller: ['$scope', '$state', 'menuService',
-                                function($scope, $state, menuService){
-
-                                $scope.ajMenuItems = menuService.data;
+                            },
+                            controller: ['$scope', '$state', '$stateParams', 'menuService',
+                                function($scope, $state, $stateParams, menuService){
+                                    
+                                    $scope.ajMenuItems = menuService.data[$stateParams.menuCategory];
 
 
                             }]
                             
                           }
-                    }，
+                    }
 
-                })
-            
-            ;
+                });
             
             
-}])；
+}]);

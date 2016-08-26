@@ -438,4 +438,5 @@ h4, h6, p, li{
 }
 a, a:hover, a:visited {
     text-decoration: none;
+    color:inherit;
 }

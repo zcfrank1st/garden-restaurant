@@ -19,7 +19,7 @@
         }
     ]},
     "lunch menu": {
-        "menuSubtitle": "" ,
+        "menuSubtitle": "This is in the lunch menu" ,
         "menuItems": [{
         "menuPic": "images/roastduck.png",
         "menuName": "Peking Duck",
@@ -31,7 +31,7 @@
         {
         "menuPic": "images/roastduck.png",
         "menuName": "Peking Duck",
-        "menuDesc": "Juicy!",
+        "menuDesc": "Juicy!!!!!!!!!!",
         "menuSpicy":true,
         "menuVege":false,
         "menuPrice": "$38.00"
