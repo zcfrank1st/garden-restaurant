@@ -1,0 +1,49 @@
+$parent-class: ".reservpg";
+$reservpg-font-stack: (
+    "ul li p":18 18 18 18
+   
+);
+
+#{$parent-class} {
+    @include font-stack($reservpg-font-stack);
+    
+    @include breakpoints-def(small) {
+        .reserv-page {
+            text-align: center;
+            color: $color-text-01;
+            background-color: transparentize($color-bg-01, 0.3);
+            
+            .reserve-pic {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            
+            p {
+                line-height: 2em;
+                padding-bottom: 200px;
+            }
+        }
+        
+        
+
+    }
+    
+    @include breakpoints-def(medium) {
+
+
+    }
+    
+    @include breakpoints-def(large) {
+        .reserv-page {
+            
+            .reserve-pic {
+                margin-bottom: 30px;
+            }
+            
+            p {
+                padding-bottom: 100px;
+            }
+        }
+    }
+}
+

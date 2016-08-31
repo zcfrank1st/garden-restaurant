@@ -1,0 +1,52 @@
+$parent-class: ".contactpg";
+$contactpg-font-stack: (
+    ".contact-item h4":25 25 25 25,
+    ".contact-item p":14 14 14 14
+   
+);
+
+#{$parent-class} {
+    @include font-stack($contactpg-font-stack);
+    
+    @include breakpoints-def(small) {
+        color: $color-text-01;
+        
+        .contact-page {
+            background-color: transparentize($color-bg-01, 0.3);
+            padding: 60px;
+        }
+        
+        .contact-item {
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            
+            h4 {
+                text-decoration: underline;
+                line-height: 2em;
+            }
+            
+            p {
+                line-height: 2em;
+            }
+            
+            table tr td {
+                line-height: 2em;
+                min-width: 100px;
+            }
+        }
+        
+        .contact-google-map {
+            width: 100%;
+        }
+
+    }
+    
+    @include breakpoints-def(medium) {
+
+
+    }
+    
+    @include breakpoints-def(large) {
+
+    }
+}

@@ -1,0 +1,25 @@
+<div class="storypg">
+    <div class="row">
+        <div class="column">
+            <ul class="large-one-forth story-page">
+                <li>
+                    <div class="view story-side">
+
+                        <div class="story-side-header">
+                            <p>Our Story</p>
+                        </div>
+                        <div class="story-side-list">
+                            <p ng-repeat="(key, value) in ajStory">
+                                <a ui-sref="story.items({storyItems:key})" ui-sref-active="active">{{key}}</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div ui-view="storyItems" ></div>
+
+                </li>
+            </ul>
+        </div> 
+    </div>
+</div>

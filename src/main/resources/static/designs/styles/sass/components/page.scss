@@ -34,6 +34,15 @@
          clear: both;
          display: table;
      }
+     
+    .large-one-forth > li:first-child{
+        @include span-columns (3);
+    }
+        
+    .large-one-forth > li:last-child{
+        @include span-columns (9);
+        @include omega();
+    }
 }
 
 @include breakpoints-def(medium) {

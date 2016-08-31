@@ -1,0 +1,58 @@
+$parent-class: ".storypg";
+$storypg-font-stack: (
+    ".story-side .story-side-header p":25 25 25 25,
+    ".story-side .story-side-list p":16 16 16 16
+   
+);
+
+#{$parent-class} {
+    @include font-stack($storypg-font-stack);
+    
+    @include breakpoints-def(small) {
+        color: $color-text-01;
+        
+        .story-page {
+            background-color: transparentize($color-bg-01, 0.3);
+        }
+        
+        .story-side {
+            margin:10px;
+            text-transform: capitalize;
+            
+            .story-side-header {
+                padding: 15px;
+                border:solid 1px $color-border-01;
+            }
+            
+            .story-side-list {
+                padding: 15px;
+                border:solid 1px $color-border-01;
+                min-height: 200px;
+                
+                p  {
+                    padding-bottom: 30px;
+                }
+            }
+        }
+        
+        .story-items {
+            padding:10px 40px 100px 40px;
+            text-align: center;
+            
+            img {
+                width: 100%;
+                margin-bottom: 40px;
+            }
+        }
+
+    }
+    
+    @include breakpoints-def(medium) {
+
+
+    }
+    
+    @include breakpoints-def(large) {
+
+    }
+}

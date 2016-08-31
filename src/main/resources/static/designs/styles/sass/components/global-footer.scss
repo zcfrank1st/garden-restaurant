@@ -13,6 +13,7 @@ $global-footer-font-stack: (
         text-align: center;
         letter-spacing: 1px;
         text-transform: uppercase;
+        padding-top: 60px;
         
         .footer-logo {
             opacity: 0.3;
@@ -48,17 +49,18 @@ $global-footer-font-stack: (
             }
         }
         
-        > ul li.contactSection {
+        > ul li.contact-section {
             .contact {
                 padding-bottom: 40px;
             }
             
-            .socialSite li{
+            .social-site li{
                 padding-right: 15px;
+                display:inline-block;
             }
             
-            .socialSite img {
-                width: 80px;
+            .social-site img {
+                width: 40px;
                 height: auto;
             }
             
@@ -68,7 +70,14 @@ $global-footer-font-stack: (
     
     @include breakpoints-def(medium) {
 
-
+        > ul li.contact-section {
+            
+            .social-site img {
+                width: 30px;
+               
+            }
+            
+        }
     }
     
     @include breakpoints-def(large) {
@@ -95,5 +104,11 @@ $global-footer-font-stack: (
             display: block;
         }
         
+        > ul li.contact-section {
+            .social-site img {
+                width: 50px;
+            }
+            
+        }
     }
 }

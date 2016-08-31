@@ -1,0 +1,30 @@
+$parent-class: ".rewardpg";
+$rewardpg-font-stack: (
+    "ul li h2":25 25 25 25
+   
+);
+
+#{$parent-class} {
+    @include font-stack($rewardpg-font-stack);
+    
+    @include breakpoints-def(small) {
+        .reward-page {
+            text-align: center;
+            color: $color-text-01;
+            background-color: transparentize($color-bg-01, 0.3);
+            padding: 60px;
+            line-height: 2em;
+            font-family: $font-family-brush;
+        }
+    }
+    
+    @include breakpoints-def(medium) {
+
+
+    }
+    
+    @include breakpoints-def(large) {
+        
+    }
+}
+

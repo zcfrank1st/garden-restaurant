@@ -59,9 +59,6 @@
             <a class="full garden-logo" ui-sref="home">
                 <img src="images/SZECHUAN GARDEN.png" />
             </a>
-            <div class="garden-sublogo">
-                <img src="images/authentic%20chinese%20cuisine-1.png" />
-            </div>
             <!-- Mobile Menu Bar-->
             <div class="garden-menu-mobile" ng-click="showMenu()">
                 <img src="images/navigate.png" />
@@ -78,7 +75,7 @@
                     <a ui-sref="rewards">rewards</a>
                 </li>
                 <li ui-sref-active="active">
-                    <a ui-sref="our story">our story</a>
+                    <a ui-sref="story.items({storyItems:'Overview'})">our story</a>
                 </li>
                 <li ui-sref-active="active">
                     <a ui-sref="contact">contact</a>
@@ -100,9 +97,9 @@
                     <li>
                         <div class="view">
                         <h4>Address</h4>
-                        <p>959 WYANDOTTE ST W.</p>
-                        <p>WINDSOR, ONTARIO</p>
-                        <p>N9A 5Y2</p>
+                        <p>959 WYANDOTTE ST W.<br />
+                        WINDSOR, ONTARIO<br />
+                        N9A 5Y2</p>
                         </div>
                     </li>
                     <li class="buz-hour">
@@ -140,23 +137,23 @@
                         </table>
                             </div>
                     </li>
-                    <li class="contactSection">
+                    <li class="contact-section">
                         <div class="view">
                             <div class="contact">
                                 <h4>Contact</h4>
-                                <p>Email: ADMIN@sezchuangarden1986.com</p>
-                                <p>tel: (519)253-9595</p>
+                                <p>Email: ADMIN@sezchuangarden1986.com<br />
+                                tel: (519)253-9595</p>
                             </div>
-                            <div class="socialSite">
+                            <div class="social-site">
                                 <ul>
                                     <li>
-                                        <img src="images/Find%20Us.png">
+                                        <img src="images/Facebook_icon.png">
                                     </li>
                                     <li>
-                                        <img src="images/Find%20Us.png">
+                                        <img src="images/Twitter-logo.png">
                                     </li>
                                     <li>
-                                        <img src="images/Find%20Us.png">
+                                        <img src="images/instagram.png">
                                     </li>
                                 </ul>
                             </div>
@@ -169,11 +166,19 @@
     
     <!--    TODO: change to the server path later-->
     <script src="designs/scripts/app.js"></script>
+    <script src="designs/scripts/utils/filters.js"></script>
 <!--    <script src="/garden-restaurant/src/main/resources/static/designs/scripts/components/global-nav.js"></script>-->
     <script src="designs/scripts/components/homepg.js"></script>
     <script src="designs/scripts/components/menu.js"></script>
     <script src="designs/scripts/services/menu-items.js"></script>
     <script src="designs/scripts/services/menu-service.js"></script>
+    <script src="designs/scripts/components/reservation.js"></script>
+    
+    <script src="designs/scripts/services/reservation-service.js"></script>
+    <script src="designs/scripts/components/rewards.js"></script>
+    <script src="designs/scripts/components/story.js"></script>
+    <script src="designs/scripts/services/story-service.js"></script>
+    <script src="designs/scripts/components/contact.js"></script>
     
 </body>
     

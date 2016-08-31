@@ -1,7 +1,7 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('SGarden', [
+var SGarden = angular.module('SGarden', [
     'ngRoute',
     'ngResource',
     'ui.router',
@@ -10,11 +10,17 @@ angular.module('SGarden', [
     'SGarden.homepg',
     'SGarden.menu',
     'SGarden.menu.items',
-    'SGarden.menu.service'
+    'SGarden.menu.service',
+    'SGarden.reserv',
+    'SGarden.reserv.service',
+    'SGarden.rewards',
+    'SGarden.story', 
+    'SGarden.story.service',
+    'SGarden.contact'
 
-])
+]);
 
-.run(
+SGarden.run(
   [          '$rootScope', '$state', '$stateParams',
     function ($rootScope,   $state,   $stateParams) {
 
@@ -22,9 +28,9 @@ angular.module('SGarden', [
     $rootScope.$stateParams = $stateParams;
     }
   ]
-)
+);
 
-.config([       '$stateProvider', '$locationProvider', '$urlRouterProvider',
+SGarden.config([       '$stateProvider', '$locationProvider', '$urlRouterProvider',
         function($stateProvider,   $locationProvider,   $urlRouterProvider) {
             $locationProvider.html5Mode(true);
 
@@ -39,9 +45,9 @@ angular.module('SGarden', [
                 });
             
             
-}])
+}]);
 
-.controller("globalCtrl", ['$scope', function($scope){
+SGarden.controller("globalCtrl", ['$scope', function($scope){
     $scope.navToggle = false;
     $scope.showMenu = function(){
          $scope.navToggle = !$scope.navToggle;

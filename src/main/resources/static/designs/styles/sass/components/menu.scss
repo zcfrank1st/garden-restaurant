@@ -11,6 +11,11 @@ $menupg-font-stack: (
     @include font-stack($menupg-font-stack);
     
     @include breakpoints-def(small) {
+        .menu-page {
+            background-color: transparentize($color-bg-01, 0.3);
+            margin-bottom: 60px;
+        }
+        
         .menu-list-panel {
             //background:$color-border-01 url("../../../../images/roastduck.png") no-repeat fixed 0 0; 
             min-height: 200px;
@@ -21,12 +26,7 @@ $menupg-font-stack: (
                 display: block;
                 min-height: 200px;
                 padding: 0 20px;
-                background-color: $color-bg-01;
-                background-repeat: repeat-y;
-                background: -webkit-linear-gradient(left, transparentize($color-bg-01, 0), transparentize($color-bg-03, 0.9));
-                background: -moz-linear-gradient(left, transparentize($color-bg-01, 0), transparentize($color-bg-03, 0.9));
-                background: -ms-linear-gradient(left, transparentize($color-bg-01, 0), transparentize($color-bg-03, 0.9));
-                background: -o-linear-gradient(left, transparentize($color-bg-01, 0), transparentize($color-bg-03, 0.9));                                 
+                background: url("../../../../images/MenuBrown.png") no-repeat;                       
             }
             
             .menu-list-title {
@@ -37,16 +37,9 @@ $menupg-font-stack: (
             }
         }
         
-        .menu-list-panel:after {
+        .menu-list-panel {
               content: "";
-              background: url("../../../../images/roastduck.png") no-repeat right top;
-              opacity: 0.5;
-              top: 0;
-              left: 0;
-              bottom: 0;
-              right: 0;
-              position: absolute;
-              z-index: -1;  
+              background: url("../../../../images/MainmenuPic.png") no-repeat 180% top; 
         }
         
         
@@ -58,7 +51,7 @@ $menupg-font-stack: (
 
         .menu-items {
             display: inline-block;
-            padding: 20px 0;
+            padding: 20px 10px;
         }
         
         .menu-items-header {
@@ -142,17 +135,16 @@ $menupg-font-stack: (
     
     @include breakpoints-def(medium) {
 
-
+        .menu-list-panel {
+              content: "";
+              background: url("../../../../images/MainmenuPic.png") no-repeat 180% top; 
+        }
     }
     
     @include breakpoints-def(large) {
-        .large-one-forth > li:first-child{
-            @include span-columns (3);
-        }
-        
-        .large-one-forth > li:last-child{
-            @include span-columns (9);
-            @include omega();
+        .menu-list-panel {
+              content: "";
+              background: url("../../../../images/MainmenuPic.png") no-repeat right top; 
         }
         
         .side-menu {
