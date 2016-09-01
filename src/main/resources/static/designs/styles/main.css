@@ -1282,24 +1282,24 @@ li > .view {
 .homepg {
   letter-spacing: 1px;
   text-transform: uppercase; }
-  .homepg ul li a {
+  .homepg .homepg-panel .homepg-panel-item a {
     font-size: 1.5625em; }
-  .homepg ul li p {
+  .homepg .homepg-panel .homepg-panel-item a p {
     font-size: 1.125em; }
   @media screen and (min-width: 40em) {
-    .homepg ul li a {
+    .homepg .homepg-panel .homepg-panel-item a {
       font-size: 1.5625em; }
-    .homepg ul li p {
+    .homepg .homepg-panel .homepg-panel-item a p {
       font-size: 1.125em; } }
   @media screen and (min-width: 61.25em) {
-    .homepg ul li a {
+    .homepg .homepg-panel .homepg-panel-item a {
       font-size: 1.5625em; }
-    .homepg ul li p {
+    .homepg .homepg-panel .homepg-panel-item a p {
       font-size: 1.125em; } }
   @media screen and (min-width: 64em) {
-    .homepg ul li a {
+    .homepg .homepg-panel .homepg-panel-item a {
       font-size: 1.5625em; }
-    .homepg ul li p {
+    .homepg .homepg-panel .homepg-panel-item a p {
       font-size: 1.125em; } }
   .homepg .homepg-caoursel {
     height: auto;
@@ -1322,9 +1322,9 @@ li > .view {
     color: rgba(255, 255, 255, 0.7); }
     .homepg .homepg-panel li {
       min-height: 280px; }
-    .homepg .homepg-panel li .view {
+    .homepg .homepg-panel li .homepg-panel-item {
       padding-top: 100px; }
-    .homepg .homepg-panel li .view a {
+    .homepg .homepg-panel li .homepg-panel-item a {
       width: 100%;
       padding-bottom: 10px; }
   .homepg .homepg-panel-small {

@@ -1,4 +1,4 @@
-<div class="homepg" ng-controller="homepgCtrl">
+<div class="homepg">
     <div class="row bleed">
         <div class="column homepg-caoursel">
             <div class="full">
@@ -10,24 +10,14 @@
     <div class="row">
     
         <div class="column homepg-panel">
-
             <ul class="two-three">
-                <li>
-                    <div class="view">
-                    <a >Monthly Special</a>
-                    <p>August 2016</p>
-                        </div>
-                </li>
-                <li>
-                    <div class="view">
-                    <a>How far you can go?</a>
-                    <p>Your adventure begins here</p>
-                    </div>
-                </li>
-                <li>
-                    <div class="view">
-                    <a>Local Favorites</a>
-                    <p></p>
+                <li ng-repeat="item in ajHomepg">
+                    <div class="homepg-panel-item">
+                    <a target="_blank" href="{{item.homepgLink}}">
+                        {{item.homepgTitle}}
+                        <p>{{item.homepgSubtitle}}</p>
+                    </a>
+                    
                     </div>
                 </li>
             </ul>

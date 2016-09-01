@@ -1,0 +1,19 @@
+{
+    "homepg": [
+        {
+            "homepgTitle":"Monthly Special",
+            "homepgSubtitle": "August 2016" ,
+            "homepgLink": "/images/roastduck.png"
+        },
+        {
+            "homepgTitle":"How far you can go?",
+            "homepgSubtitle": "Your adventure begins here" ,
+            "homepgLink": "/images/roastduck.png"
+        },
+        {
+            "homepgTitle":"Monthly Special",
+            "homepgSubtitle": "August 2016" ,
+            "homepgLink": "/images/roastduck.png"
+        }
+    ]
+}

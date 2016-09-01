@@ -8,6 +8,7 @@ var SGarden = angular.module('SGarden', [
     'ngAnimate',
     'ui.bootstrap',
     'SGarden.homepg',
+    'SGarden.homepg.service',
     'SGarden.menu',
     'SGarden.menu.items',
     'SGarden.menu.service',
@@ -16,7 +17,8 @@ var SGarden = angular.module('SGarden', [
     'SGarden.rewards',
     'SGarden.story', 
     'SGarden.story.service',
-    'SGarden.contact'
+    'SGarden.contact',
+    'SGarden.adminpg',
 
 ]);
 

@@ -1,7 +1,7 @@
 $parent-class: ".homepg";
 $homepg-font-stack: (
-    "ul li a":25 25 25 25,
-    "ul li p":18 18 18 18,
+    ".homepg-panel .homepg-panel-item a":25 25 25 25,
+    ".homepg-panel .homepg-panel-item a p":18 18 18 18,
    
 );
 
@@ -51,11 +51,11 @@ $homepg-font-stack: (
                 min-height: 280px;
             }
             
-            li .view{
+            li .homepg-panel-item{
                 padding-top: 100px;
             }
             
-            li .view a {
+            li .homepg-panel-item a {
                 width: 100%;
                 padding-bottom: 10px;
             }
