@@ -1677,6 +1677,23 @@ li > .view {
   padding: 60px;
   line-height: 2em;
   font-family: "Rock Salt"; }
+.rewardpg form input {
+  width: 100%; }
+.rewardpg form .login-pswd {
+  margin-bottom: 20px; }
+.rewardpg form label {
+  display: block; }
+.rewardpg form .btn-primary {
+  display: block;
+  background-color: rgba(57, 49, 45, 0.1);
+  width: 100%;
+  border: 1px solid #ffc979; }
+  .rewardpg form .btn-primary:hover {
+    background-color: rgba(57, 49, 45, 0.9); }
+@media screen and (min-width: 61.25em) {
+  .rewardpg form {
+    width: 50%;
+    margin: 0 25%; } }
 
 .storypg {
   color: #ffc979; }

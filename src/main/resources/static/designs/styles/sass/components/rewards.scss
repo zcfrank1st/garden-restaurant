@@ -16,6 +16,33 @@ $rewardpg-font-stack: (
             line-height: 2em;
             font-family: $font-family-brush;
         }
+        
+        form {
+            
+            input {
+                width: 100%;
+            }
+
+            .login-pswd {
+                margin-bottom: 20px;
+            }
+            
+            label {
+                display: block;
+            }
+            
+            .btn-primary {
+                display: block;
+                background-color: transparentize($color-bg-01, 0.9);
+                width: 100%;
+                border: 1px solid $color-border-01;
+                
+                &:hover {
+                    
+                    background-color: transparentize($color-bg-01, 0.1);
+                }
+            }
+        }
     }
     
     @include breakpoints-def(medium) {
@@ -24,7 +51,10 @@ $rewardpg-font-stack: (
     }
     
     @include breakpoints-def(large) {
-        
+        form {
+            width: 50%;
+            margin: 0 25%;
+        }
     }
 }
 

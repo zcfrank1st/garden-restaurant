@@ -18,7 +18,7 @@ var SGarden = angular.module('SGarden', [
     'SGarden.story', 
     'SGarden.story.service',
     'SGarden.contact',
-    'SGarden.adminpg',
+   // 'SGarden.adminpg',
 
 ]);
 

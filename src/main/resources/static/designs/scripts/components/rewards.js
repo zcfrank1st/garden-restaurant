@@ -23,6 +23,25 @@ angular.module('SGarden.rewards', [
  
                         //$scope.ajReserv = reservService.data.reservation;
                     }]
-                });
+                })
+                .state("rewards.login", {
+                        url:"/login",
+                        views: {
+                            "rewardsLogin": {
+                                templateUrl: "apps/components/rewardsLogin.html",
+                                controller: ['$scope', '$state',
+                                    function($scope, $state){
+                                        $scope.loginForm = {};
+                                        
+                                        $scope.processForm = function(){
+                                            
+                                        };
+                                    
+                                }]
+                            }
+                                
+
+                        }
+                    });
                        
 }]);
