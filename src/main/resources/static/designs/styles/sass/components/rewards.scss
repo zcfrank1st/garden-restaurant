@@ -21,6 +21,7 @@ $rewardpg-font-stack: (
             
             input {
                 width: 100%;
+                text-align: center;
             }
 
             .login-pswd {
@@ -42,6 +43,11 @@ $rewardpg-font-stack: (
                     background-color: transparentize($color-bg-01, 0.1);
                 }
             }
+        }
+
+        .help-block {
+            padding: 10px;
+            
         }
     }
     

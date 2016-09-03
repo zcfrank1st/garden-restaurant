@@ -1282,25 +1282,25 @@ li > .view {
 .homepg {
   letter-spacing: 1px;
   text-transform: uppercase; }
-  .homepg .homepg-panel .homepg-panel-item a {
+  .homepg .homepg-panel .homepg-panel-item {
     font-size: 1.5625em; }
-  .homepg .homepg-panel .homepg-panel-item a p {
-    font-size: 1.125em; }
+  .homepg .homepg-panel .homepg-panel-item .homepg-panel-subtitle {
+    font-size: 0.625em; }
   @media screen and (min-width: 40em) {
-    .homepg .homepg-panel .homepg-panel-item a {
+    .homepg .homepg-panel .homepg-panel-item {
       font-size: 1.5625em; }
-    .homepg .homepg-panel .homepg-panel-item a p {
-      font-size: 1.125em; } }
+    .homepg .homepg-panel .homepg-panel-item .homepg-panel-subtitle {
+      font-size: 0.625em; } }
   @media screen and (min-width: 61.25em) {
-    .homepg .homepg-panel .homepg-panel-item a {
+    .homepg .homepg-panel .homepg-panel-item {
       font-size: 1.5625em; }
-    .homepg .homepg-panel .homepg-panel-item a p {
-      font-size: 1.125em; } }
+    .homepg .homepg-panel .homepg-panel-item .homepg-panel-subtitle {
+      font-size: 0.625em; } }
   @media screen and (min-width: 64em) {
-    .homepg .homepg-panel .homepg-panel-item a {
+    .homepg .homepg-panel .homepg-panel-item {
       font-size: 1.5625em; }
-    .homepg .homepg-panel .homepg-panel-item a p {
-      font-size: 1.125em; } }
+    .homepg .homepg-panel .homepg-panel-item .homepg-panel-subtitle {
+      font-size: 0.625em; } }
   .homepg .homepg-caoursel {
     height: auto;
     width: 100%;
@@ -1323,7 +1323,7 @@ li > .view {
     .homepg .homepg-panel li {
       min-height: 280px; }
     .homepg .homepg-panel li .homepg-panel-item {
-      padding-top: 100px; }
+      padding: 100px 10px 0 10px; }
     .homepg .homepg-panel li .homepg-panel-item a {
       width: 100%;
       padding-bottom: 10px; }
@@ -1678,7 +1678,8 @@ li > .view {
   line-height: 2em;
   font-family: "Rock Salt"; }
 .rewardpg form input {
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
 .rewardpg form .login-pswd {
   margin-bottom: 20px; }
 .rewardpg form label {
@@ -1690,6 +1691,8 @@ li > .view {
   border: 1px solid #ffc979; }
   .rewardpg form .btn-primary:hover {
     background-color: rgba(57, 49, 45, 0.9); }
+.rewardpg .help-block {
+  padding: 10px; }
 @media screen and (min-width: 61.25em) {
   .rewardpg form {
     width: 50%;
@@ -1698,7 +1701,7 @@ li > .view {
 .storypg {
   color: #ffc979; }
   .storypg .story-side .story-side-header p {
-    font-size: 1.5625em; }
+    font-size: 1em; }
   .storypg .story-side .story-side-list p {
     font-size: 1em; }
   @media screen and (min-width: 40em) {

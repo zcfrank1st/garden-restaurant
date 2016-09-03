@@ -1,20 +1,26 @@
-<form ng-submit="processForm()">
+<!-- SHOW ERROR/SUCCESS MESSAGES --> 
+<p ng-show="errorMessage" class="help-block">Not Valid username/password combination</p>
+<p ng-show="successMessage" class="help-block">{{message}}</p>
+    
+<form name="form" novalidate> 
     <!-- NAME -->
-    <div id="login-name" class="login-name">
+    <div class="login-name">
       <label>Name</label>
-      <input type="text" name="name" class="" placeholder="Your Username" ng-model="loginForm.name" required>
-      <span class="help-block"></span>
+      <input type="text" name="name" class="" placeholder="Your Username" ng-model="loginForm.name" required="" />
+<!--        name is not valid and has been touched-->
+      <p ng-show="form.name.$touched && form.name.$error.required" class="help-block">You name is required.</p>
+
     </div>
 
     <!-- SUPERHERO NAME -->
-    <div id="login-pswd" class="login-pswd">
+    <div class="login-pswd">
       <label>Password</label>
-      <input type="password" name="password" class="" placeholder="********" ng-model="loginForm.password" required>
-      <span class="help-block"></span>
+      <input type="password" name="password" class="" placeholder="********" ng-model="loginForm.password" required="" />
+      <p ng-show="form.password.$touched && form.password.$error.required" class="help-block">Enter a valid password.</p>
     </div>
 
     <!-- SUBMIT BUTTON -->
-    <button type="submit" class="btn-primary">
+    <button type="submit" class="btn-primary" ng-disabled="loginForm.$invalid" ng-click="submitForm(!loginForm.$invalid)" >
         Submit!
     </button>
 </form>

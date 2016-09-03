@@ -22,23 +22,7 @@ angular.module('SGarden.homepg', [
                     controller: ['$scope', '$state', 'homepgService',
                         function($scope, $state, homepgService){
  
-                        $scope.ajHomepg = [
-        {
-            "homepgTitle":"Monthly Special",
-            "homepgSubtitle": "August 2016" ,
-            "homepgLink": "/images/roastduck.png"
-        },
-        {
-            "homepgTitle":"How far you can go?",
-            "homepgSubtitle": "Your adventure begins here" ,
-            "homepgLink": "/images/roastduck.png"
-        },
-        {
-            "homepgTitle":"Monthly Special",
-            "homepgSubtitle": "August 2016" ,
-            "homepgLink": "/images/roastduck.png"
-        }
-    ];
+                        $scope.ajHomepg = homepgService.data.homepg;
                     }]
                 });
                        

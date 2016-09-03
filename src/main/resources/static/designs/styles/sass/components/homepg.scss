@@ -1,8 +1,7 @@
 $parent-class: ".homepg";
 $homepg-font-stack: (
-    ".homepg-panel .homepg-panel-item a":25 25 25 25,
-    ".homepg-panel .homepg-panel-item a p":18 18 18 18,
-   
+    ".homepg-panel .homepg-panel-item":25 25 25 25,
+    ".homepg-panel .homepg-panel-item .homepg-panel-subtitle":10 10 10 10
 );
 
 #{$parent-class} {
@@ -52,7 +51,7 @@ $homepg-font-stack: (
             }
             
             li .homepg-panel-item{
-                padding-top: 100px;
+                padding: 100px 10px 0 10px;
             }
             
             li .homepg-panel-item a {

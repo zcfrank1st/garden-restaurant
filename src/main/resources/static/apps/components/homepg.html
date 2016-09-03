@@ -14,8 +14,8 @@
                 <li ng-repeat="item in ajHomepg">
                     <div class="homepg-panel-item">
                     <a target="_blank" href="{{item.homepgLink}}">
-                        {{item.homepgTitle}}
-                        <p>{{item.homepgSubtitle}}</p>
+                        <p>{{item.homepgTitle}}</p>
+                        <p class="homepg-panel-subtitle">{{item.homepgSubtitle}}</p>
                     </a>
                     
                     </div>
@@ -54,19 +54,13 @@
                         </div>
                     </a>
                 </li>
-                <li>
-                    <a>
-                        <div class="view">
-                        <h4>monthly Special</h4>
-                        </div>
+                <li ng-repeat="item in ajHomepg">
+                    <div class="view">
+                    <a target="_blank" href="{{item.homepgLink}}">
+                        <p>{{item.homepgTitle}}</p>
+                        
                     </a>
-                </li>
-                <li>
-                    <a>
-                        <div class="view">
-                    <h4>local favorites</h4>
-                        </div>
-                    </a>
+                    </div>
                 </li>
             </ul>
         </div>
